@@ -1,0 +1,66 @@
+
+##### rain 3-day #####
+--- step 1: selection on 2025 (fit 2024) ---
+A_pooled                 mean   43.4%  worst   27.7%   Bene: 27.7 Coim: 58.6 Ghen: 37.5 Oslo: 50.4 Toul: 42.7
+B_local                  mean   48.6%  worst   41.4%   Bene: 41.4 Coim: 63.5 Ghen: 43.2 Oslo: 51.4 Toul: 43.5
+C_bias_scaled            mean   47.1%  worst   38.5%   Bene: 38.5 Coim: 57.9 Ghen: 42.0 Oslo: 49.1 Toul: 48.2
+D_pooled+local_offset    mean   48.7%  worst   41.3%   Bene: 41.3 Coim: 64.5 Ghen: 43.2 Oslo: 50.8 Toul: 43.8
+SELECTED: D_pooled+local_offset
+--- step 2: 2026 test (fit 2024-2025) ---
+A_pooled
+   Benevento  ev=  84 AUC 0.962  vs pooled-season   41.2% [  25.5,  53.7]   vs own-city-season   39.1%   meanP 0.053 rate 0.116
+   Coimbra    ev= 202 AUC 0.986  vs pooled-season   72.0% [  54.2,  83.7]   vs own-city-season   69.3%   meanP 0.132 rate 0.167
+   Ghent      ev=  32 AUC 0.833  vs pooled-season   -2.2% [ -43.5,  26.6]   vs own-city-season  -19.3%   meanP 0.120 rate 0.044
+   Oslo       ev= 142 AUC 0.965  vs pooled-season   51.5% [  39.7,  60.5]   vs own-city-season   56.8%   meanP 0.117 rate 0.098
+   Toulouse   ev=  91 AUC 0.937  vs pooled-season   35.1% [  22.6,  47.9]   vs own-city-season   38.9%   meanP 0.085 rate 0.094
+B_local
+   Benevento  ev=  84 AUC 0.962  vs pooled-season   53.7% [  38.1,  63.9]   vs own-city-season   52.1%   meanP 0.118 rate 0.116
+   Coimbra    ev= 202 AUC 0.986  vs pooled-season   76.1% [  59.3,  87.2]   vs own-city-season   73.8%   meanP 0.160 rate 0.167
+   Ghent      ev=  32 AUC 0.829  vs pooled-season   35.3% [  16.3,  63.3]   vs own-city-season   24.5%   meanP 0.045 rate 0.044
+   Oslo       ev= 142 AUC 0.968  vs pooled-season   50.9% [  42.0,  59.6]   vs own-city-season   56.2%   meanP 0.074 rate 0.098
+   Toulouse   ev=  91 AUC 0.941  vs pooled-season   36.7% [  18.0,  49.2]   vs own-city-season   40.4%   meanP 0.103 rate 0.094
+C_bias_scaled
+   Benevento  ev=  84 AUC 0.962  vs pooled-season   58.4% [  39.1,  70.4]   vs own-city-season   56.9%   meanP 0.106 rate 0.116
+   Coimbra    ev= 202 AUC 0.986  vs pooled-season   73.5% [  55.8,  85.1]   vs own-city-season   71.0%   meanP 0.137 rate 0.167
+   Ghent      ev=  32 AUC 0.833  vs pooled-season   13.8% [ -14.5,  37.0]   vs own-city-season   -0.6%   meanP 0.095 rate 0.044
+   Oslo       ev= 142 AUC 0.963  vs pooled-season   49.5% [  40.2,  57.9]   vs own-city-season   55.0%   meanP 0.084 rate 0.098
+   Toulouse   ev=  91 AUC 0.938  vs pooled-season   36.0% [  17.9,  48.7]   vs own-city-season   39.7%   meanP 0.108 rate 0.094
+D_pooled+local_offset  <== selected
+   Benevento  ev=  84 AUC 0.962  vs pooled-season   54.1% [  38.7,  63.9]   vs own-city-season   52.5%   meanP 0.118 rate 0.116
+   Coimbra    ev= 202 AUC 0.986  vs pooled-season   75.6% [  59.0,  86.9]   vs own-city-season   73.2%   meanP 0.158 rate 0.167
+   Ghent      ev=  32 AUC 0.833  vs pooled-season   33.2% [  13.8,  61.1]   vs own-city-season   22.0%   meanP 0.047 rate 0.044
+   Oslo       ev= 142 AUC 0.965  vs pooled-season   50.8% [  40.8,  60.1]   vs own-city-season   56.1%   meanP 0.074 rate 0.098
+   Toulouse   ev=  91 AUC 0.937  vs pooled-season   35.9% [  19.3,  49.6]   vs own-city-season   39.7%   meanP 0.100 rate 0.094
+
+##### heat 3-day #####
+--- step 1: selection on 2025 (fit 2024) ---
+A_pooled                 mean   72.3%  worst   49.1%   Bene: 49.1 Coim: 77.9 Ghen: 66.6 Oslo: 84.8 Toul: 83.2
+B_local                  mean   79.8%  worst   69.4%   Bene: 80.3 Coim: 77.7 Ghen: 69.4 Oslo: 84.8 Toul: 86.7
+C_bias_scaled            mean  -26.1%  worst -214.8%   Bene:-11.4 Coim: 23.2 Ghen: 58.7 Oslo:-214.8 Toul: 13.9
+D_pooled+local_offset    mean   79.8%  worst   69.4%   Bene: 80.2 Coim: 77.8 Ghen: 69.4 Oslo: 84.8 Toul: 86.8
+SELECTED: D_pooled+local_offset
+--- step 2: 2026 test (fit 2024-2025) ---
+A_pooled
+   Benevento  ev= 205 AUC 0.998  vs pooled-season   51.4% [   3.7,  80.4]   vs own-city-season  -31.4%   meanP 0.375 rate 0.282
+   Coimbra    ev= 212 AUC 0.987  vs pooled-season   76.7% [  62.1,  87.2]   vs own-city-season   77.5%   meanP 0.186 rate 0.175
+   Ghent      ev=  83 AUC 0.992  vs pooled-season   66.6% [  53.6,  79.5]   vs own-city-season   71.4%   meanP 0.097 rate 0.114
+   Oslo       ev=  30 AUC 0.995  vs pooled-season   90.5% [  77.4,  99.6]   vs own-city-season   66.9%   meanP 0.018 rate 0.021
+   Toulouse   ev= 332 AUC 0.999  vs pooled-season   90.0% [  84.4,  95.1]   vs own-city-season   82.4%   meanP 0.309 rate 0.343
+B_local
+   Benevento  ev= 205 AUC 0.998  vs pooled-season   87.3% [  74.9,  94.4]   vs own-city-season   65.6%   meanP 0.302 rate 0.282
+   Coimbra    ev= 212 AUC 0.987  vs pooled-season   76.5% [  61.2,  87.1]   vs own-city-season   77.3%   meanP 0.187 rate 0.175
+   Ghent      ev=  83 AUC 0.992  vs pooled-season   72.4% [  63.8,  82.2]   vs own-city-season   76.3%   meanP 0.127 rate 0.114
+   Oslo       ev=  30 AUC 0.995  vs pooled-season   89.0% [  72.4,  99.8]   vs own-city-season   61.5%   meanP 0.014 rate 0.021
+   Toulouse   ev= 332 AUC 0.999  vs pooled-season   95.3% [  91.3,  98.6]   vs own-city-season   91.7%   meanP 0.342 rate 0.343
+C_bias_scaled
+   Benevento  ev= 205 AUC 0.998  vs pooled-season   37.8% [  12.1,  59.4]   vs own-city-season  -68.1%   meanP 0.191 rate 0.282
+   Coimbra    ev= 212 AUC 0.987  vs pooled-season   44.9% [  25.2,  63.4]   vs own-city-season   46.8%   meanP 0.131 rate 0.175
+   Ghent      ev=  83 AUC 0.992  vs pooled-season   68.4% [  59.2,  77.3]   vs own-city-season   72.9%   meanP 0.176 rate 0.114
+   Oslo       ev=  30 AUC 0.995  vs pooled-season   -5.5% [ -66.2,  49.3]   vs own-city-season -267.8%   meanP 0.150 rate 0.021
+   Toulouse   ev= 332 AUC 0.999  vs pooled-season   21.6% [   4.0,  40.6]   vs own-city-season  -37.6%   meanP 0.189 rate 0.343
+D_pooled+local_offset  <== selected
+   Benevento  ev= 205 AUC 0.998  vs pooled-season   87.2% [  74.8,  94.4]   vs own-city-season   65.5%   meanP 0.302 rate 0.282
+   Coimbra    ev= 212 AUC 0.987  vs pooled-season   76.5% [  61.1,  87.1]   vs own-city-season   77.3%   meanP 0.187 rate 0.175
+   Ghent      ev=  83 AUC 0.992  vs pooled-season   72.4% [  63.8,  82.1]   vs own-city-season   76.3%   meanP 0.126 rate 0.114
+   Oslo       ev=  30 AUC 0.995  vs pooled-season   88.9% [  72.4,  99.8]   vs own-city-season   61.5%   meanP 0.014 rate 0.021
+   Toulouse   ev= 332 AUC 0.999  vs pooled-season   95.3% [  91.4,  98.6]   vs own-city-season   91.7%   meanP 0.342 rate 0.343

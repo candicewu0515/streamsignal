@@ -1,0 +1,7 @@
+﻿local_field,official_concept,compatibility,source,status
+site,Selected local stream,Manual mapping to official stream identifier required,https://www.oneaquahealth.eu/citizen-science-project/,No verified import schema or API
+"clarity, flow, odour, vegetation, wildlife",Guided stream observations,Concept alignment; official vocabulary unverified,https://www.oneaquahealth.eu/citizen-science-project/,No verified import schema or API
+"litter, erosion",Visible environmental pressures,Concept alignment only,https://www.oneaquahealth.eu/citizen-science-project/,No verified import schema or API
+"colour, observation_date, record_type, notes",Local supplementary observation context,Exact official fields unverified,https://www.oneaquahealth.eu/citizen-science-project/,No verified import schema or API
+photo_references,Upstream / downstream photographs,References only; files must be submitted separately,https://www.oneaquahealth.eu/citizen-science-project/,No verified import schema or API
+"historical_issue, weather_target, provenance",Local audit metadata,No official import equivalent verified,https://www.oneaquahealth.eu/citizen-science-project/,No verified import schema or API

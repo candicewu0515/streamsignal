@@ -1,0 +1,27 @@
+test_foreign_origin_rejected (test_export_server.ExportServerTests.test_foreign_origin_rejected) ... ok
+test_invalid_type_rejected (test_export_server.ExportServerTests.test_invalid_type_rejected) ... ok
+test_no_overwrite (test_export_server.ExportServerTests.test_no_overwrite) ... ok
+test_path_escape_rejected (test_export_server.ExportServerTests.test_path_escape_rejected) ... ok
+test_same_origin_unicode_export (test_export_server.ExportServerTests.test_same_origin_unicode_export) ... ok
+test_all_bin_and_month_counts_reconcile (test_forecast.ForecastTests.test_all_bin_and_month_counts_reconcile) ... ok
+test_exported_probabilities_reproduce_model_parameters (test_forecast.ForecastTests.test_exported_probabilities_reproduce_model_parameters) ... ok
+test_future_weather_never_enters_features (test_forecast.ForecastTests.test_future_weather_never_enters_features) ... ok
+test_missing_feature_or_target_excludes_all_affected_targets (test_forecast.ForecastTests.test_missing_feature_or_target_excludes_all_affected_targets) ... ok
+test_model_selection_uses_validation_brier (test_forecast.ForecastTests.test_model_selection_uses_validation_brier) ... ok
+test_reliability_includes_probability_one (test_forecast.ForecastTests.test_reliability_includes_probability_one) ... ok
+test_scaler_fitted_only_to_training (test_forecast.ForecastTests.test_scaler_fitted_only_to_training) ... ok
+test_seasonal_baseline_uses_training_labels_only (test_forecast.ForecastTests.test_seasonal_baseline_uses_training_labels_only) ... ok
+test_target_based_splits_and_gap_counts (test_forecast.ForecastTests.test_target_based_splits_and_gap_counts) ... ok
+test_test_metrics_recompute_from_export (test_forecast.ForecastTests.test_test_metrics_recompute_from_export) ... ok
+test_candidate_selection_uses_only_validation (test_multihazard.MultiHazardTests.test_candidate_selection_uses_only_validation) ... ok
+test_every_exported_task_metric_recomputes (test_multihazard.MultiHazardTests.test_every_exported_task_metric_recomputes) ... ok
+test_features_are_causal (test_multihazard.MultiHazardTests.test_features_are_causal) ... ok
+test_future_window_and_compound_definition (test_multihazard.MultiHazardTests.test_future_window_and_compound_definition) ... ok
+test_geographic_fold_excludes_city (test_multihazard.MultiHazardTests.test_geographic_fold_excludes_city) ... ok
+test_missing_day_removes_any_affected_target_window (test_multihazard.MultiHazardTests.test_missing_day_removes_any_affected_target_window) ... ok
+test_split_windows_never_cross_year_boundaries (test_multihazard.MultiHazardTests.test_split_windows_never_cross_year_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 2.861s
+
+OK

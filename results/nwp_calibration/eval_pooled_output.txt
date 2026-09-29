@@ -1,0 +1,18 @@
+
+=== rain 3-day, held-out city ===   (fit: other cities 2024-2025 NWP rows; test: held-out city 2026)
+city          n   ev AUC_nwp AUC_seas  skill_vs_seasonal            90% CI
+Benevento   726   84   0.962    0.434             43.8%   [  28.3,  55.8]
+Coimbra    1210  202   0.986    0.498             72.4%   [  54.5,  84.0]
+Ghent       726   32   0.833    0.551             -4.8%   [ -52.6,  26.2]
+Oslo       1452  142   0.965    0.515             49.8%   [  36.6,  59.2]
+Toulouse    968   91   0.937    0.613             36.8%   [  25.0,  49.5]
+coverage: 5082/5082 test windows have complete NWP
+
+=== heat 3-day, held-out city ===   (fit: other cities 2024-2025 NWP rows; test: held-out city 2026)
+city          n   ev AUC_nwp AUC_seas  skill_vs_seasonal            90% CI
+Benevento   726  205   0.998    0.984             57.0%   [  12.0,  82.8]
+Coimbra    1210  212   0.987    0.816             76.9%   [  62.7,  87.1]
+Ghent       726   83   0.992    0.835             68.6%   [  57.2,  80.1]
+Oslo       1452   30   0.995    0.909             87.7%   [  72.3,  99.5]
+Toulouse    968  332   0.999    0.968             91.3%   [  85.9,  95.9]
+coverage: 5082/5082 test windows have complete NWP

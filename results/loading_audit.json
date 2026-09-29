@@ -1,0 +1,31 @@
+{
+  "legacyBytes": 8516600,
+  "newInitialBytes": 467670,
+  "fieldCacheBytes": 698405,
+  "reductionPct": 94.5087241387408,
+  "cacheVersion": "200a51a64279",
+  "dashboardDeferredBytes": 157203,
+  "dashboardTotalStaticBytes": 624873,
+  "scope": "Uncompressed static dependency bytes, not request timing. Initial excludes the separately loaded dashboard map, background PWA preparation and weather responses. Cache bytes include both root and index HTML keys.",
+  "initialFiles": [
+    "assets/bulletin.css",
+    "assets/bulletin.js",
+    "assets/dashboard-view.js",
+    "assets/field-app.js",
+    "assets/field-i18n.js",
+    "assets/field.css",
+    "assets/fonts/IBMPlexMono-Regular.woff2",
+    "assets/fonts/IBMPlexSans-Medium.woff2",
+    "assets/fonts/IBMPlexSans-Regular.woff2",
+    "assets/fonts/IBMPlexSansCondensed-Medium.woff2",
+    "assets/icon.svg",
+    "assets/live-core.js",
+    "assets/nwp.js",
+    "assets/operations-core.js",
+    "assets/pwa-192.png",
+    "assets/styles.css",
+    "data/sites.json",
+    "index.html",
+    "manifest.webmanifest"
+  ]
+}

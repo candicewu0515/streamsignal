@@ -1,0 +1,38 @@
+{
+  "version": 4,
+  "generatedFrom": "Frozen source snapshot and version 3 test predictions",
+  "defaultIssue": "2026-02-02",
+  "defaultContextSite": "C2",
+  "timeline": {
+    "city": "Coimbra",
+    "hazard": "rain",
+    "horizon": 3,
+    "redThresholdPct": 40,
+    "rows": 1205,
+    "outcomes": {
+      "Hit": 84,
+      "False alarm": 11,
+      "Miss": 118,
+      "Correct rejection": 992
+    },
+    "example": {
+      "group": 7,
+      "issued": "2026-02-02",
+      "start": "2026-02-03",
+      "end": "2026-02-05",
+      "probability": 0.8648622660949995,
+      "alert": true,
+      "event": true,
+      "outcome": "Hit",
+      "verified": "2026-02-04",
+      "leadDays": 2
+    }
+  },
+  "matrix": {
+    "sites": 106,
+    "scored": 104,
+    "exposureMedian": 22.00956937799043,
+    "sensitivityMedian": 48.57717948717948
+  },
+  "combinedBackgroundFlagSites": []
+}

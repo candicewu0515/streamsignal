@@ -1,0 +1,612 @@
+{
+  "protocol": "docs/FORECAST_PROTOCOL.md",
+  "target": "Next calendar day recorded rainfall >= 10 mm",
+  "version": 2,
+  "timing": "Issue after complete daily weather is available; retrospective hindcast, not a live forecast",
+  "split": {
+    "train": {
+      "rows": 15288,
+      "events": 1341,
+      "eventRate": 0.08771585557299844,
+      "targetStart": "2023-01-04",
+      "targetEnd": "2024-12-31",
+      "groups": 21
+    },
+    "validation": {
+      "rows": 7665,
+      "events": 611,
+      "eventRate": 0.0797129810828441,
+      "targetStart": "2025-01-01",
+      "targetEnd": "2025-12-31",
+      "groups": 21
+    },
+    "test": {
+      "rows": 5376,
+      "events": 394,
+      "eventRate": 0.07328869047619048,
+      "targetStart": "2026-01-01",
+      "targetEnd": "2026-09-21",
+      "groups": 21
+    }
+  },
+  "candidates": [
+    {
+      "C": 0.01,
+      "validationBrier": 0.0665038619813675,
+      "iterations": 43
+    },
+    {
+      "C": 0.1,
+      "validationBrier": 0.06654530371033851,
+      "iterations": 87
+    },
+    {
+      "C": 1.0,
+      "validationBrier": 0.06659273677714668,
+      "iterations": 107
+    },
+    {
+      "C": 10.0,
+      "validationBrier": 0.06660095486588015,
+      "iterations": 114
+    }
+  ],
+  "selectedC": 0.01,
+  "featureNames": [
+    "Temperature mean",
+    "Temperature minimum",
+    "Temperature maximum",
+    "Relative humidity",
+    "Daily rainfall",
+    "Mean wind",
+    "Maximum wind",
+    "Surface pressure",
+    "Cloud cover",
+    "Solar radiation",
+    "Log rainfall",
+    "Previous-day rainfall",
+    "Three-day rainfall",
+    "Three-day mean temperature",
+    "Three-day mean humidity",
+    "Pressure change",
+    "Season sine",
+    "Season cosine"
+  ],
+  "thresholdSelection": "Maximum validation F1; ties choose higher threshold",
+  "validation": {
+    "logistic": {
+      "n": 7665,
+      "events": 611,
+      "eventRate": 0.0797129810828441,
+      "brier": 0.0665038619813675,
+      "rocAuc": 0.7882386843229944,
+      "averagePrecision": 0.2471912601752754,
+      "threshold": 0.17097804990041535,
+      "precision": 0.2573099415204678,
+      "recall": 0.4320785597381342,
+      "f1": 0.3225412339645693,
+      "tn": 6292,
+      "fp": 762,
+      "fn": 347,
+      "tp": 264
+    },
+    "seasonal": {
+      "n": 7665,
+      "events": 611,
+      "eventRate": 0.0797129810828441,
+      "brier": 0.07237017143406985,
+      "rocAuc": 0.6426979944751664,
+      "averagePrecision": 0.12174769840647444,
+      "threshold": 0.13008130081300814,
+      "precision": 0.15071283095723015,
+      "recall": 0.36333878887070375,
+      "f1": 0.21305182341650672,
+      "tn": 5803,
+      "fp": 1251,
+      "fn": 389,
+      "tp": 222
+    },
+    "constant": {
+      "n": 7665,
+      "events": 611,
+      "eventRate": 0.0797129810828441,
+      "brier": 0.07342286772983538,
+      "rocAuc": 0.5,
+      "averagePrecision": 0.0797129810828441,
+      "threshold": 0.08771585557299844,
+      "precision": 0.0797129810828441,
+      "recall": 1.0,
+      "f1": 0.14765587240212663,
+      "tn": 0,
+      "fp": 7054,
+      "fn": 0,
+      "tp": 611
+    }
+  },
+  "test": {
+    "logistic": {
+      "n": 5376,
+      "events": 394,
+      "eventRate": 0.07328869047619048,
+      "brier": 0.05697374388539097,
+      "rocAuc": 0.853961061853128,
+      "averagePrecision": 0.37170104402756293,
+      "threshold": 0.17097804990041535,
+      "precision": 0.3144758735440932,
+      "recall": 0.4796954314720812,
+      "f1": 0.3798994974874372,
+      "tn": 4570,
+      "fp": 412,
+      "fn": 205,
+      "tp": 189
+    },
+    "seasonal": {
+      "n": 5376,
+      "events": 394,
+      "eventRate": 0.07328869047619048,
+      "brier": 0.06770180428805606,
+      "rocAuc": 0.6488691777709399,
+      "averagePrecision": 0.10632856626708932,
+      "threshold": 0.13008130081300814,
+      "precision": 0.12887112887112886,
+      "recall": 0.32741116751269034,
+      "f1": 0.18494623655913978,
+      "tn": 4110,
+      "fp": 872,
+      "fn": 265,
+      "tp": 129
+    },
+    "constant": {
+      "n": 5376,
+      "events": 394,
+      "eventRate": 0.07328869047619048,
+      "brier": 0.06812560141720618,
+      "rocAuc": 0.5,
+      "averagePrecision": 0.07328869047619048,
+      "threshold": 0.08771585557299844,
+      "precision": 0.07328869047619048,
+      "recall": 1.0,
+      "f1": 0.1365684575389948,
+      "tn": 0,
+      "fp": 4982,
+      "fn": 0,
+      "tp": 394
+    }
+  },
+  "coefficients": [
+    {
+      "feature": "Temperature mean",
+      "coefficient": 0.04764212466308059
+    },
+    {
+      "feature": "Temperature minimum",
+      "coefficient": 0.1484340543692827
+    },
+    {
+      "feature": "Temperature maximum",
+      "coefficient": -0.04270502939059802
+    },
+    {
+      "feature": "Relative humidity",
+      "coefficient": -0.03819605277425615
+    },
+    {
+      "feature": "Daily rainfall",
+      "coefficient": -0.06531000750227342
+    },
+    {
+      "feature": "Mean wind",
+      "coefficient": -0.05926967824097374
+    },
+    {
+      "feature": "Maximum wind",
+      "coefficient": 0.17942693624924183
+    },
+    {
+      "feature": "Surface pressure",
+      "coefficient": -0.3006372679232952
+    },
+    {
+      "feature": "Cloud cover",
+      "coefficient": 0.6956600053969577
+    },
+    {
+      "feature": "Solar radiation",
+      "coefficient": -0.02473365928969359
+    },
+    {
+      "feature": "Log rainfall",
+      "coefficient": 0.2892210121693035
+    },
+    {
+      "feature": "Previous-day rainfall",
+      "coefficient": 0.025541455076411812
+    },
+    {
+      "feature": "Three-day rainfall",
+      "coefficient": 0.07553520314808727
+    },
+    {
+      "feature": "Three-day mean temperature",
+      "coefficient": 0.027367379012768603
+    },
+    {
+      "feature": "Three-day mean humidity",
+      "coefficient": 0.020069307362736103
+    },
+    {
+      "feature": "Pressure change",
+      "coefficient": -0.028317353926086145
+    },
+    {
+      "feature": "Season sine",
+      "coefficient": -0.024022154240311844
+    },
+    {
+      "feature": "Season cosine",
+      "coefficient": -0.010705503927892091
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2026-01",
+      "n": 651,
+      "events": 114,
+      "modelBrier": 0.12603262396841208,
+      "seasonalBrier": 0.1464013361358918
+    },
+    {
+      "month": "2026-02",
+      "n": 588,
+      "events": 95,
+      "modelBrier": 0.10152894947977936,
+      "seasonalBrier": 0.12929525910503734
+    },
+    {
+      "month": "2026-03",
+      "n": 651,
+      "events": 28,
+      "modelBrier": 0.03808129735340276,
+      "seasonalBrier": 0.04484385102733456
+    },
+    {
+      "month": "2026-04",
+      "n": 630,
+      "events": 31,
+      "modelBrier": 0.04388890101937977,
+      "seasonalBrier": 0.04880787209091059
+    },
+    {
+      "month": "2026-05",
+      "n": 651,
+      "events": 54,
+      "modelBrier": 0.06358784877480829,
+      "seasonalBrier": 0.07688903328106442
+    },
+    {
+      "month": "2026-06",
+      "n": 630,
+      "events": 32,
+      "modelBrier": 0.04559954928446199,
+      "seasonalBrier": 0.05053082106932263
+    },
+    {
+      "month": "2026-07",
+      "n": 651,
+      "events": 10,
+      "modelBrier": 0.01760651814869374,
+      "seasonalBrier": 0.02409734243803258
+    },
+    {
+      "month": "2026-08",
+      "n": 483,
+      "events": 20,
+      "modelBrier": 0.03900535407769906,
+      "seasonalBrier": 0.04789467816262822
+    },
+    {
+      "month": "2026-09",
+      "n": 441,
+      "events": 10,
+      "modelBrier": 0.026482583843767213,
+      "seasonalBrier": 0.027165609566754206
+    }
+  ],
+  "reliability": {
+    "logistic": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "count": 4025,
+        "meanPrediction": 0.04253747444203271,
+        "observedRate": 0.02236024844720497
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 917,
+        "meanPrediction": 0.14130278906536758,
+        "observedRate": 0.1559432933478735
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "count": 306,
+        "meanPrediction": 0.24593608428745897,
+        "observedRate": 0.2679738562091503
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "count": 95,
+        "meanPrediction": 0.3450396632070715,
+        "observedRate": 0.5789473684210527
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 30,
+        "meanPrediction": 0.4329997780122586,
+        "observedRate": 0.7666666666666667
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "count": 3,
+        "meanPrediction": 0.5593328235193263,
+        "observedRate": 0.3333333333333333
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      }
+    ],
+    "seasonal": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "count": 3547,
+        "meanPrediction": 0.06425796617804445,
+        "observedRate": 0.04877361150267832
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 1636,
+        "meanPrediction": 0.13490505973167505,
+        "observedRate": 0.132640586797066
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "count": 193,
+        "meanPrediction": 0.21594517800434562,
+        "observedRate": 0.02072538860103627
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      }
+    ],
+    "constant": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "count": 5376,
+        "meanPrediction": 0.08771585557299844,
+        "observedRate": 0.07328869047619048
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "count": 0,
+        "meanPrediction": null,
+        "observedRate": null
+      }
+    ]
+  },
+  "brierSkill": 0.15846047997509172,
+  "brierDifferenceInterval": {
+    "method": "Moving-block bootstrap; all weather groups retained together by target day",
+    "blockCalendarDays": 7,
+    "resamples": 300,
+    "seed": 42,
+    "estimate": 0.0107280604026651,
+    "lower": 0.006413321119897695,
+    "upper": 0.016250876565738214
+  },
+  "model": {
+    "means": [
+      12.35261512297231,
+      8.383743458922037,
+      16.59323129251698,
+      77.1599358974362,
+      2.772328623757163,
+      2.9088906331763535,
+      4.43452642595501,
+      989.8888736263743,
+      60.328538723181794,
+      12.941711145996834,
+      0.7653492330086548,
+      2.7741300366300052,
+      8.327608581894278,
+      12.355752223966425,
+      77.16270495377633,
+      0.0034929356357927773,
+      -0.001236051000110117,
+      -0.00484711150160548
+    ],
+    "scales": [
+      7.904142625657856,
+      7.300524337553309,
+      9.022940598806533,
+      12.465899038974015,
+      5.357051572488336,
+      1.387653291656546,
+      1.784326427185401,
+      17.158422225184466,
+      30.174608468751956,
+      8.47024802229301,
+      0.9423199427622259,
+      5.356925067792323,
+      11.424776393622867,
+      7.788087702927978,
+      11.162701330796652,
+      5.390702050271022,
+      0.70834673918718,
+      0.7058469202106762
+    ],
+    "coefficients": [
+      0.04764212466308059,
+      0.1484340543692827,
+      -0.04270502939059802,
+      -0.03819605277425615,
+      -0.06531000750227342,
+      -0.05926967824097374,
+      0.17942693624924183,
+      -0.3006372679232952,
+      0.6956600053969577,
+      -0.02473365928969359,
+      0.2892210121693035,
+      0.025541455076411812,
+      0.07553520314808727,
+      0.027367379012768603,
+      0.020069307362736103,
+      -0.028317353926086145,
+      -0.024022154240311844,
+      -0.010705503927892091
+    ],
+    "intercept": -2.740490913717058
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "sklearn": "1.7.2",
+    "matplotlib": "3.10.6"
+  }
+}

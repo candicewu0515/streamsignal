@@ -1,0 +1,28 @@
+{
+  "release": "v8 bulletin review",
+  "javascriptTestsPassed": 85,
+  "pythonTestsPassed": 22,
+  "modelChanges": false,
+  "dataChanges": false,
+  "recommendationRuleChanges": false,
+  "missionSuggestions": "derived automatically on render; plan acceptance stays explicit",
+  "desktopViewportWidth": 1024,
+  "alertBoardContainerWidth": 926,
+  "alertBoardTableWidth": 926,
+  "collapsedRowHeight": 92.7890625,
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "mobileDocumentWidths": {
+    "dashboard": 390,
+    "mission": 390,
+    "live": 390,
+    "research": 390
+  },
+  "contrastFailures": 0,
+  "minimumTextContrast": 4.5,
+  "displayGroupBase": 1,
+  "storedGroupBase": 0,
+  "globalNumericFontSubstitution": false
+}

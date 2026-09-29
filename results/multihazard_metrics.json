@@ -1,0 +1,4255 @@
+{
+  "version": 3,
+  "protocol": "docs/MULTIHAZARD_PROTOCOL.md",
+  "tasks": {
+    "rain_3": {
+      "key": "rain_3",
+      "name": "Rain accumulation",
+      "horizon": 3,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15162,
+          "events": 1983,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7623,
+          "events": 1071,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 5082,
+          "events": 551,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7623,
+            "events": 1071,
+            "eventRate": 0.14049586776859505,
+            "brier": 0.11091245597740411,
+            "rocAuc": 0.7237782577418432,
+            "averagePrecision": 0.29918804237569624,
+            "threshold": 0.17543960905324507,
+            "precision": 0.30740140464613724,
+            "recall": 0.5312791783380019,
+            "f1": 0.3894592744695414,
+            "tn": 5270,
+            "fp": 1282,
+            "fn": 502,
+            "tp": 569
+          },
+          "boosted": {
+            "n": 7623,
+            "events": 1071,
+            "eventRate": 0.14049586776859505,
+            "brier": 0.11182231661064819,
+            "rocAuc": 0.7244078543098151,
+            "averagePrecision": 0.29756035654075236,
+            "threshold": 0.13093093487696228,
+            "precision": 0.2647058823529412,
+            "recall": 0.6050420168067226,
+            "f1": 0.3682864450127877,
+            "tn": 4752,
+            "fp": 1800,
+            "fn": 423,
+            "tp": 648
+          },
+          "seasonal": {
+            "n": 7623,
+            "events": 1071,
+            "eventRate": 0.14049586776859505,
+            "brier": 0.11703828609817529,
+            "rocAuc": 0.6430156108027256,
+            "averagePrecision": 0.22194332177174161,
+            "threshold": 0.1391304347826087,
+            "precision": 0.22560740455071346,
+            "recall": 0.5462184873949579,
+            "f1": 0.3193231441048035,
+            "tn": 4544,
+            "fp": 2008,
+            "fn": 486,
+            "tp": 585
+          },
+          "persistence": {
+            "n": 7623,
+            "events": 1071,
+            "eventRate": 0.14049586776859505,
+            "brier": 0.11645078700841092,
+            "rocAuc": 0.6051183293830352,
+            "averagePrecision": 0.19853559818208782,
+            "threshold": 0.23602177140029687,
+            "precision": 0.3211951447245565,
+            "recall": 0.3211951447245565,
+            "f1": 0.3211951447245565,
+            "tn": 5825,
+            "fp": 727,
+            "fn": 727,
+            "tp": 344
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 5082,
+            "events": 551,
+            "eventRate": 0.10842188114915388,
+            "brier": 0.08135939442674117,
+            "rocAuc": 0.7677653959555089,
+            "averagePrecision": 0.3997046397332964,
+            "threshold": 0.17543960905324507,
+            "precision": 0.30979978925184404,
+            "recall": 0.5335753176043557,
+            "f1": 0.39199999999999996,
+            "tn": 3876,
+            "fp": 655,
+            "fn": 257,
+            "tp": 294
+          },
+          "boosted": {
+            "n": 5082,
+            "events": 551,
+            "eventRate": 0.10842188114915388,
+            "brier": 0.08598894050799787,
+            "rocAuc": 0.7768309940674866,
+            "averagePrecision": 0.3023439356965204,
+            "threshold": 0.13093093487696228,
+            "precision": 0.2514450867052023,
+            "recall": 0.631578947368421,
+            "f1": 0.3596899224806202,
+            "tn": 3495,
+            "fp": 1036,
+            "fn": 203,
+            "tp": 348
+          },
+          "seasonal": {
+            "n": 5082,
+            "events": 551,
+            "eventRate": 0.10842188114915388,
+            "brier": 0.09797772343182194,
+            "rocAuc": 0.6222431797726571,
+            "averagePrecision": 0.14715175820965778,
+            "threshold": 0.1391304347826087,
+            "precision": 0.17692806221646143,
+            "recall": 0.4954627949183303,
+            "f1": 0.2607449856733524,
+            "tn": 3261,
+            "fp": 1270,
+            "fn": 278,
+            "tp": 273
+          },
+          "persistence": {
+            "n": 5082,
+            "events": 551,
+            "eventRate": 0.10842188114915388,
+            "brier": 0.09153378760240742,
+            "rocAuc": 0.6466665812164716,
+            "averagePrecision": 0.20735248918290616,
+            "threshold": 0.23602177140029687,
+            "precision": 0.3782771535580524,
+            "recall": 0.3666061705989111,
+            "f1": 0.3723502304147466,
+            "tn": 4199,
+            "fp": 332,
+            "fn": 349,
+            "tp": 202
+          }
+        }
+      },
+      "brierSkill": 0.1696133409003392,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.01661832900508076,
+        "lower": 0.008785458631733896,
+        "upper": 0.02676649980134136
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2869,
+          "meanPrediction": 0.057108857379014985,
+          "observedRate": 0.043569187870338096
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 1499,
+          "meanPrediction": 0.14147951345011517,
+          "observedRate": 0.11407605070046697
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 458,
+          "meanPrediction": 0.23834107626216436,
+          "observedRate": 0.27510917030567683
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 122,
+          "meanPrediction": 0.34088311685617895,
+          "observedRate": 0.3114754098360656
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 49,
+          "meanPrediction": 0.4539753709388039,
+          "observedRate": 0.3469387755102041
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 22,
+          "meanPrediction": 0.5510395594031698,
+          "observedRate": 0.8181818181818182
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 32,
+          "meanPrediction": 0.6577435518610556,
+          "observedRate": 0.84375
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 18,
+          "meanPrediction": 0.7554085684289951,
+          "observedRate": 0.8888888888888888
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 13,
+          "meanPrediction": 0.8242502225918369,
+          "observedRate": 1.0
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "meanPrediction": null,
+          "observedRate": null
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.1,
+          "precision": 0.19249887031179394,
+          "recall": 0.7731397459165155,
+          "f1": 0.30824891461649784,
+          "tn": 2744,
+          "fp": 1787,
+          "fn": 125,
+          "tp": 426
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.2,
+          "precision": 0.35714285714285715,
+          "recall": 0.4627949183303085,
+          "f1": 0.4031620553359684,
+          "tn": 4072,
+          "fp": 459,
+          "fn": 296,
+          "tp": 255
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.3,
+          "precision": 0.50390625,
+          "recall": 0.23411978221415608,
+          "f1": 0.31970260223048325,
+          "tn": 4404,
+          "fp": 127,
+          "fn": 422,
+          "tp": 129
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.4,
+          "precision": 0.6791044776119403,
+          "recall": 0.16515426497277677,
+          "f1": 0.26569343065693435,
+          "tn": 4488,
+          "fp": 43,
+          "fn": 460,
+          "tp": 91
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.5,
+          "precision": 0.8705882352941177,
+          "recall": 0.13430127041742287,
+          "f1": 0.23270440251572327,
+          "tn": 4520,
+          "fp": 11,
+          "fn": 477,
+          "tp": 74
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.6,
+          "precision": 0.8888888888888888,
+          "recall": 0.10163339382940109,
+          "f1": 0.18241042345276876,
+          "tn": 4524,
+          "fp": 7,
+          "fn": 495,
+          "tp": 56
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.7,
+          "precision": 0.9354838709677419,
+          "recall": 0.05263157894736842,
+          "f1": 0.09965635738831613,
+          "tn": 4529,
+          "fp": 2,
+          "fn": 522,
+          "tp": 29
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.8,
+          "precision": 1.0,
+          "recall": 0.023593466424682397,
+          "f1": 0.04609929078014185,
+          "tn": 4531,
+          "fp": 0,
+          "fn": 538,
+          "tp": 13
+        },
+        {
+          "n": 5082,
+          "events": 551,
+          "eventRate": 0.10842188114915388,
+          "brier": 0.08135939442674117,
+          "rocAuc": 0.7677653959555089,
+          "averagePrecision": 0.3997046397332964,
+          "threshold": 0.9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "tn": 4531,
+          "fp": 0,
+          "fn": 551,
+          "tp": 0
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 175,
+          "modelBrier": 0.18475084228638275,
+          "seasonalBrier": 0.20392024507958267
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 130,
+          "modelBrier": 0.10831159908551877,
+          "seasonalBrier": 0.16182725402984482
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 37,
+          "modelBrier": 0.05050244822207564,
+          "seasonalBrier": 0.061110898668916884
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 39,
+          "modelBrier": 0.06212014904331528,
+          "seasonalBrier": 0.06274022182580975
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 70,
+          "modelBrier": 0.08893712754839932,
+          "seasonalBrier": 0.0978166744190879
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 63,
+          "modelBrier": 0.08474520629943852,
+          "seasonalBrier": 0.09210540442330245
+        },
+        {
+          "month": "2026-07",
+          "n": 651,
+          "events": 11,
+          "modelBrier": 0.022858873619920318,
+          "seasonalBrier": 0.04563268948276165
+        },
+        {
+          "month": "2026-08",
+          "n": 294,
+          "events": 26,
+          "modelBrier": 0.08825617138021842,
+          "seasonalBrier": 0.10452016394487035
+        },
+        {
+          "month": "2026-09",
+          "n": 336,
+          "events": 0,
+          "modelBrier": 0.016010848455690656,
+          "seasonalBrier": 0.025493696112680236
+        }
+      ]
+    },
+    "heat_3": {
+      "key": "heat_3",
+      "name": "Heat exposure",
+      "horizon": 3,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15162,
+          "events": 1407,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7623,
+          "events": 868,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 5082,
+          "events": 862,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7623,
+            "events": 868,
+            "eventRate": 0.11386593204775022,
+            "brier": 0.044201333639634334,
+            "rocAuc": 0.968010553711707,
+            "averagePrecision": 0.7928521942375002,
+            "threshold": 0.387871865896435,
+            "precision": 0.7191392978482446,
+            "recall": 0.7315668202764977,
+            "f1": 0.7252998286693317,
+            "tn": 6507,
+            "fp": 248,
+            "fn": 233,
+            "tp": 635
+          },
+          "boosted": {
+            "n": 7623,
+            "events": 868,
+            "eventRate": 0.11386593204775022,
+            "brier": 0.04758180705971389,
+            "rocAuc": 0.9645814501632176,
+            "averagePrecision": 0.7843646129954647,
+            "threshold": 0.2539781654382116,
+            "precision": 0.6413043478260869,
+            "recall": 0.815668202764977,
+            "f1": 0.718052738336714,
+            "tn": 6359,
+            "fp": 396,
+            "fn": 160,
+            "tp": 708
+          },
+          "seasonal": {
+            "n": 7623,
+            "events": 868,
+            "eventRate": 0.11386593204775022,
+            "brier": 0.06430716680669087,
+            "rocAuc": 0.9209736259538079,
+            "averagePrecision": 0.5542526539431037,
+            "threshold": 0.18548387096774194,
+            "precision": 0.5390977443609023,
+            "recall": 0.826036866359447,
+            "f1": 0.6524112829845314,
+            "tn": 6142,
+            "fp": 613,
+            "fn": 151,
+            "tp": 717
+          },
+          "persistence": {
+            "n": 7623,
+            "events": 868,
+            "eventRate": 0.11386593204775022,
+            "brier": 0.06409021503734151,
+            "rocAuc": 0.802382942145603,
+            "averagePrecision": 0.4620798265270338,
+            "threshold": 0.6288147622427254,
+            "precision": 0.6497695852534562,
+            "recall": 0.6497695852534562,
+            "f1": 0.6497695852534562,
+            "tn": 6451,
+            "fp": 304,
+            "fn": 304,
+            "tp": 564
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 5082,
+            "events": 862,
+            "eventRate": 0.16961826052735143,
+            "brier": 0.05912541185620339,
+            "rocAuc": 0.9624759459429741,
+            "averagePrecision": 0.8386168100270577,
+            "threshold": 0.387871865896435,
+            "precision": 0.7350230414746544,
+            "recall": 0.740139211136891,
+            "f1": 0.7375722543352601,
+            "tn": 3990,
+            "fp": 230,
+            "fn": 224,
+            "tp": 638
+          },
+          "boosted": {
+            "n": 5082,
+            "events": 862,
+            "eventRate": 0.16961826052735143,
+            "brier": 0.06036628611263572,
+            "rocAuc": 0.9614783211092905,
+            "averagePrecision": 0.8476306564798087,
+            "threshold": 0.2539781654382116,
+            "precision": 0.6952089704383282,
+            "recall": 0.7911832946635731,
+            "f1": 0.7400976668475312,
+            "tn": 3921,
+            "fp": 299,
+            "fn": 180,
+            "tp": 682
+          },
+          "seasonal": {
+            "n": 5082,
+            "events": 862,
+            "eventRate": 0.16961826052735143,
+            "brier": 0.08280675899889467,
+            "rocAuc": 0.9275073949043884,
+            "averagePrecision": 0.7701290672807655,
+            "threshold": 0.18548387096774194,
+            "precision": 0.654042988741044,
+            "recall": 0.7412993039443155,
+            "f1": 0.6949429037520392,
+            "tn": 3882,
+            "fp": 338,
+            "fn": 223,
+            "tp": 639
+          },
+          "persistence": {
+            "n": 5082,
+            "events": 862,
+            "eventRate": 0.16961826052735143,
+            "brier": 0.08416883387366783,
+            "rocAuc": 0.8203717245246919,
+            "averagePrecision": 0.5446068748861709,
+            "threshold": 0.6288147622427254,
+            "precision": 0.704784130688448,
+            "recall": 0.7006960556844548,
+            "f1": 0.7027341477603258,
+            "tn": 3967,
+            "fp": 253,
+            "fn": 258,
+            "tp": 604
+          }
+        }
+      },
+      "brierSkill": 0.2859832630692307,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.023681347142691263,
+        "lower": 0.008125745037802674,
+        "upper": 0.041599286105875745
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 3637,
+          "meanPrediction": 0.006741057510823126,
+          "observedRate": 0.011273027220236459
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 223,
+          "meanPrediction": 0.14753696963233806,
+          "observedRate": 0.17040358744394618
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 197,
+          "meanPrediction": 0.24681495479692603,
+          "observedRate": 0.38578680203045684
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 169,
+          "meanPrediction": 0.34737390128421286,
+          "observedRate": 0.46745562130177515
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 100,
+          "meanPrediction": 0.4419288353270355,
+          "observedRate": 0.49
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 91,
+          "meanPrediction": 0.5495087741919978,
+          "observedRate": 0.42857142857142855
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 88,
+          "meanPrediction": 0.6534398925240867,
+          "observedRate": 0.4318181818181818
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 95,
+          "meanPrediction": 0.7494616107817581,
+          "observedRate": 0.7368421052631579
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 142,
+          "meanPrediction": 0.8588555819136996,
+          "observedRate": 0.8661971830985915
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 340,
+          "meanPrediction": 0.9526457666741089,
+          "observedRate": 0.9088235294117647
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.1,
+          "precision": 0.568166089965398,
+          "recall": 0.9524361948955916,
+          "f1": 0.7117468573905505,
+          "tn": 3596,
+          "fp": 624,
+          "fn": 41,
+          "tp": 821
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.2,
+          "precision": 0.6407528641571195,
+          "recall": 0.9083526682134571,
+          "f1": 0.7514395393474089,
+          "tn": 3781,
+          "fp": 439,
+          "fn": 79,
+          "tp": 783
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.3,
+          "precision": 0.6897560975609756,
+          "recall": 0.820185614849188,
+          "f1": 0.7493375728669845,
+          "tn": 3902,
+          "fp": 318,
+          "fn": 155,
+          "tp": 707
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.4,
+          "precision": 0.7336448598130841,
+          "recall": 0.728538283062645,
+          "f1": 0.731082654249127,
+          "tn": 3992,
+          "fp": 228,
+          "fn": 234,
+          "tp": 628
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.5,
+          "precision": 0.7658730158730159,
+          "recall": 0.6716937354988399,
+          "f1": 0.715698393077874,
+          "tn": 4043,
+          "fp": 177,
+          "fn": 283,
+          "tp": 579
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.6,
+          "precision": 0.8120300751879699,
+          "recall": 0.6264501160092807,
+          "f1": 0.7072691552062867,
+          "tn": 4095,
+          "fp": 125,
+          "fn": 322,
+          "tp": 540
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.7,
+          "precision": 0.8700173310225303,
+          "recall": 0.5823665893271461,
+          "f1": 0.6977067407922168,
+          "tn": 4145,
+          "fp": 75,
+          "fn": 360,
+          "tp": 502
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.8,
+          "precision": 0.8962655601659751,
+          "recall": 0.5011600928074246,
+          "f1": 0.6428571428571429,
+          "tn": 4170,
+          "fp": 50,
+          "fn": 430,
+          "tp": 432
+        },
+        {
+          "n": 5082,
+          "events": 862,
+          "eventRate": 0.16961826052735143,
+          "brier": 0.05912541185620339,
+          "rocAuc": 0.9624759459429741,
+          "averagePrecision": 0.8386168100270577,
+          "threshold": 0.9,
+          "precision": 0.9088235294117647,
+          "recall": 0.35846867749419953,
+          "f1": 0.5141430948419301,
+          "tn": 4189,
+          "fp": 31,
+          "fn": 553,
+          "tp": 309
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 1.578689032948638e-09,
+          "seasonalBrier": 7.557249329100504e-05
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 0,
+          "modelBrier": 3.4977653350531643e-07,
+          "seasonalBrier": 6.694925690274493e-05
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 8.835808829832511e-06,
+          "seasonalBrier": 6.756250532667845e-05
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 0,
+          "modelBrier": 0.0002436130650192045,
+          "seasonalBrier": 0.0003120715854846968
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 96,
+          "modelBrier": 0.0810295030890746,
+          "seasonalBrier": 0.12963047324935142
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 215,
+          "modelBrier": 0.12094593434129354,
+          "seasonalBrier": 0.1899020117932709
+        },
+        {
+          "month": "2026-07",
+          "n": 651,
+          "events": 300,
+          "modelBrier": 0.13461380962540356,
+          "seasonalBrier": 0.1807623866907711
+        },
+        {
+          "month": "2026-08",
+          "n": 294,
+          "events": 131,
+          "modelBrier": 0.12095365638189437,
+          "seasonalBrier": 0.1311089992708842
+        },
+        {
+          "month": "2026-09",
+          "n": 336,
+          "events": 120,
+          "modelBrier": 0.1433803506725295,
+          "seasonalBrier": 0.1792997977677023
+        }
+      ]
+    },
+    "dry_3": {
+      "key": "dry_3",
+      "name": "Low rainfall",
+      "horizon": 3,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15162,
+          "events": 7228,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7623,
+          "events": 3928,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 5082,
+          "events": 2779,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7623,
+            "events": 3928,
+            "eventRate": 0.5152826971008789,
+            "brier": 0.21581798646285894,
+            "rocAuc": 0.7197391339096979,
+            "averagePrecision": 0.7086648096865701,
+            "threshold": 0.40302321071744135,
+            "precision": 0.6423647378316273,
+            "recall": 0.7828411405295316,
+            "f1": 0.7056798623063683,
+            "tn": 1983,
+            "fp": 1712,
+            "fn": 853,
+            "tp": 3075
+          },
+          "boosted": {
+            "n": 7623,
+            "events": 3928,
+            "eventRate": 0.5152826971008789,
+            "brier": 0.21601994462463045,
+            "rocAuc": 0.7196767456986239,
+            "averagePrecision": 0.7214491963131882,
+            "threshold": 0.2885253218771377,
+            "precision": 0.5917808219178082,
+            "recall": 0.879837067209776,
+            "f1": 0.7076167076167076,
+            "tn": 1311,
+            "fp": 2384,
+            "fn": 472,
+            "tp": 3456
+          },
+          "seasonal": {
+            "n": 7623,
+            "events": 3928,
+            "eventRate": 0.5152826971008789,
+            "brier": 0.25248535991385507,
+            "rocAuc": 0.5557940768749535,
+            "averagePrecision": 0.6203078999946166,
+            "threshold": 0.18548387096774194,
+            "precision": 0.5175647120972002,
+            "recall": 0.9977087576374746,
+            "f1": 0.6815652173913043,
+            "tn": 42,
+            "fp": 3653,
+            "fn": 9,
+            "tp": 3919
+          },
+          "persistence": {
+            "n": 7623,
+            "events": 3928,
+            "eventRate": 0.5152826971008789,
+            "brier": 0.23012707781329206,
+            "rocAuc": 0.6429477551267883,
+            "averagePrecision": 0.6060118588935542,
+            "threshold": 0.3362155388471178,
+            "precision": 0.5152826971008789,
+            "recall": 1.0,
+            "f1": 0.6801142758202754,
+            "tn": 0,
+            "fp": 3695,
+            "fn": 0,
+            "tp": 3928
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 5082,
+            "events": 2779,
+            "eventRate": 0.546831955922865,
+            "brier": 0.21703848882823212,
+            "rocAuc": 0.710628704177804,
+            "averagePrecision": 0.7147540565531211,
+            "threshold": 0.40302321071744135,
+            "precision": 0.6514973576042278,
+            "recall": 0.7984886649874056,
+            "f1": 0.7175424413904608,
+            "tn": 1116,
+            "fp": 1187,
+            "fn": 560,
+            "tp": 2219
+          },
+          "boosted": {
+            "n": 5082,
+            "events": 2779,
+            "eventRate": 0.546831955922865,
+            "brier": 0.21105856596260766,
+            "rocAuc": 0.7300338263669413,
+            "averagePrecision": 0.7689011588925088,
+            "threshold": 0.2885253218771377,
+            "precision": 0.6141439205955335,
+            "recall": 0.8906081324217344,
+            "f1": 0.7269789983844911,
+            "tn": 748,
+            "fp": 1555,
+            "fn": 304,
+            "tp": 2475
+          },
+          "seasonal": {
+            "n": 5082,
+            "events": 2779,
+            "eventRate": 0.546831955922865,
+            "brier": 0.257505539712599,
+            "rocAuc": 0.5529792249638557,
+            "averagePrecision": 0.6584405601722556,
+            "threshold": 0.18548387096774194,
+            "precision": 0.5448042916749454,
+            "recall": 0.9866858582223822,
+            "f1": 0.7019969278033794,
+            "tn": 12,
+            "fp": 2291,
+            "fn": 37,
+            "tp": 2742
+          },
+          "persistence": {
+            "n": 5082,
+            "events": 2779,
+            "eventRate": 0.546831955922865,
+            "brier": 0.2281871033835854,
+            "rocAuc": 0.6486977340912248,
+            "averagePrecision": 0.6386459159941705,
+            "threshold": 0.3362155388471178,
+            "precision": 0.546831955922865,
+            "recall": 1.0,
+            "f1": 0.7070347284060553,
+            "tn": 0,
+            "fp": 2303,
+            "fn": 0,
+            "tp": 2779
+          }
+        }
+      },
+      "brierSkill": 0.15715021482462865,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.04046705088436682,
+        "lower": 0.02485559762091981,
+        "upper": 0.06064285682239734
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 172,
+          "meanPrediction": 0.048492560971356874,
+          "observedRate": 0.11627906976744186
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 305,
+          "meanPrediction": 0.16150655436602857,
+          "observedRate": 0.20655737704918034
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 556,
+          "meanPrediction": 0.2512773411321131,
+          "observedRate": 0.3255395683453237
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 621,
+          "meanPrediction": 0.348246105768603,
+          "observedRate": 0.45088566827697263
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 757,
+          "meanPrediction": 0.45261008868660013,
+          "observedRate": 0.512549537648613
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 772,
+          "meanPrediction": 0.5478283388734817,
+          "observedRate": 0.5841968911917098
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 793,
+          "meanPrediction": 0.6489021575458785,
+          "observedRate": 0.6683480453972257
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 861,
+          "meanPrediction": 0.7477528877752454,
+          "observedRate": 0.7770034843205574
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 245,
+          "meanPrediction": 0.8248285776034211,
+          "observedRate": 0.8040816326530612
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "meanPrediction": null,
+          "observedRate": null
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.1,
+          "precision": 0.5619144602851324,
+          "recall": 0.9928031666066931,
+          "f1": 0.717648588893224,
+          "tn": 152,
+          "fp": 2151,
+          "fn": 20,
+          "tp": 2759
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.2,
+          "precision": 0.5854505971769816,
+          "recall": 0.9701331414177762,
+          "f1": 0.7302275189599133,
+          "tn": 394,
+          "fp": 1909,
+          "fn": 83,
+          "tp": 2696
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.3,
+          "precision": 0.6211410224746851,
+          "recall": 0.9050017992083483,
+          "f1": 0.736672524897481,
+          "tn": 769,
+          "fp": 1534,
+          "fn": 264,
+          "tp": 2515
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.4,
+          "precision": 0.6519836639439907,
+          "recall": 0.8042461317020511,
+          "f1": 0.7201546640889318,
+          "tn": 1110,
+          "fp": 1193,
+          "fn": 544,
+          "tp": 2235
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.5,
+          "precision": 0.6915013103706477,
+          "recall": 0.6646275638718964,
+          "f1": 0.6777981651376146,
+          "tn": 1479,
+          "fp": 824,
+          "fn": 932,
+          "tp": 1847
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.6,
+          "precision": 0.7351237493417588,
+          "recall": 0.5023389708528248,
+          "f1": 0.5968362548097477,
+          "tn": 1800,
+          "fp": 503,
+          "fn": 1383,
+          "tp": 1396
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.7,
+          "precision": 0.783001808318264,
+          "recall": 0.3116228859301907,
+          "f1": 0.4458172458172458,
+          "tn": 2063,
+          "fp": 240,
+          "fn": 1913,
+          "tp": 866
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.8,
+          "precision": 0.8040816326530612,
+          "recall": 0.07088880892407341,
+          "f1": 0.1302910052910053,
+          "tn": 2255,
+          "fp": 48,
+          "fn": 2582,
+          "tp": 197
+        },
+        {
+          "n": 5082,
+          "events": 2779,
+          "eventRate": 0.546831955922865,
+          "brier": 0.21703848882823212,
+          "rocAuc": 0.710628704177804,
+          "averagePrecision": 0.7147540565531211,
+          "threshold": 0.9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "tn": 2303,
+          "fp": 0,
+          "fn": 2779,
+          "tp": 0
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 198,
+          "modelBrier": 0.21934015031643098,
+          "seasonalBrier": 0.28920812249310296
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 196,
+          "modelBrier": 0.19974750765237317,
+          "seasonalBrier": 0.2572081735189856
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 277,
+          "modelBrier": 0.23000663697652202,
+          "seasonalBrier": 0.24088120084910816
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 417,
+          "modelBrier": 0.24845017840545763,
+          "seasonalBrier": 0.28950177972680574
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 360,
+          "modelBrier": 0.2315622125591605,
+          "seasonalBrier": 0.2778727515980377
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 420,
+          "modelBrier": 0.1979164850008449,
+          "seasonalBrier": 0.2550354706572189
+        },
+        {
+          "month": "2026-07",
+          "n": 651,
+          "events": 525,
+          "modelBrier": 0.19106573356467707,
+          "seasonalBrier": 0.23602935769991257
+        },
+        {
+          "month": "2026-08",
+          "n": 294,
+          "events": 177,
+          "modelBrier": 0.2235105891087805,
+          "seasonalBrier": 0.2360092059716707
+        },
+        {
+          "month": "2026-09",
+          "n": 336,
+          "events": 209,
+          "modelBrier": 0.2111886997833262,
+          "seasonalBrier": 0.19440818405926366
+        }
+      ]
+    },
+    "compound_3": {
+      "key": "compound_3",
+      "name": "Hot and dry",
+      "horizon": 3,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15162,
+          "events": 1157,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7623,
+          "events": 732,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 5082,
+          "events": 736,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7623,
+            "events": 732,
+            "eventRate": 0.09602518693427785,
+            "brier": 0.04763000549025377,
+            "rocAuc": 0.9581419258349966,
+            "averagePrecision": 0.6497727940500991,
+            "threshold": 0.2734841357266111,
+            "precision": 0.6017410228509249,
+            "recall": 0.755464480874317,
+            "f1": 0.6698970321017564,
+            "tn": 6525,
+            "fp": 366,
+            "fn": 179,
+            "tp": 553
+          },
+          "boosted": {
+            "n": 7623,
+            "events": 732,
+            "eventRate": 0.09602518693427785,
+            "brier": 0.05111234211055105,
+            "rocAuc": 0.9536571817362156,
+            "averagePrecision": 0.6011272624050936,
+            "threshold": 0.26654425936788995,
+            "precision": 0.5764331210191083,
+            "recall": 0.7418032786885246,
+            "f1": 0.6487455197132617,
+            "tn": 6492,
+            "fp": 399,
+            "fn": 189,
+            "tp": 543
+          },
+          "seasonal": {
+            "n": 7623,
+            "events": 732,
+            "eventRate": 0.09602518693427785,
+            "brier": 0.06242453178859091,
+            "rocAuc": 0.9048244800178898,
+            "averagePrecision": 0.45979396739962725,
+            "threshold": 0.1774193548387097,
+            "precision": 0.4533120510774142,
+            "recall": 0.7759562841530054,
+            "f1": 0.5722921914357681,
+            "tn": 6206,
+            "fp": 685,
+            "fn": 164,
+            "tp": 568
+          },
+          "persistence": {
+            "n": 7623,
+            "events": 732,
+            "eventRate": 0.09602518693427785,
+            "brier": 0.06380779655346035,
+            "rocAuc": 0.7582020739810301,
+            "averagePrecision": 0.3587688117506592,
+            "threshold": 0.5306298533218292,
+            "precision": 0.5628415300546448,
+            "recall": 0.5628415300546448,
+            "f1": 0.5628415300546448,
+            "tn": 6571,
+            "fp": 320,
+            "fn": 320,
+            "tp": 412
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 5082,
+            "events": 736,
+            "eventRate": 0.14482487209759937,
+            "brier": 0.06849949726420565,
+            "rocAuc": 0.945032851297545,
+            "averagePrecision": 0.6794140810498166,
+            "threshold": 0.2734841357266111,
+            "precision": 0.6142697881828316,
+            "recall": 0.748641304347826,
+            "f1": 0.6748315982853642,
+            "tn": 4000,
+            "fp": 346,
+            "fn": 185,
+            "tp": 551
+          },
+          "boosted": {
+            "n": 5082,
+            "events": 736,
+            "eventRate": 0.14482487209759937,
+            "brier": 0.07051420046378234,
+            "rocAuc": 0.9437973323795994,
+            "averagePrecision": 0.6915505223066947,
+            "threshold": 0.26654425936788995,
+            "precision": 0.6327944572748267,
+            "recall": 0.7445652173913043,
+            "f1": 0.6841448189762795,
+            "tn": 4028,
+            "fp": 318,
+            "fn": 188,
+            "tp": 548
+          },
+          "seasonal": {
+            "n": 5082,
+            "events": 736,
+            "eventRate": 0.14482487209759937,
+            "brier": 0.08517714584094928,
+            "rocAuc": 0.9177964119930371,
+            "averagePrecision": 0.6168129242000091,
+            "threshold": 0.1774193548387097,
+            "precision": 0.5610810810810811,
+            "recall": 0.7051630434782609,
+            "f1": 0.6249247441300423,
+            "tn": 3940,
+            "fp": 406,
+            "fn": 217,
+            "tp": 519
+          },
+          "persistence": {
+            "n": 5082,
+            "events": 736,
+            "eventRate": 0.14482487209759937,
+            "brier": 0.09269699673507631,
+            "rocAuc": 0.7555560835550932,
+            "averagePrecision": 0.39969503110718607,
+            "threshold": 0.5306298533218292,
+            "precision": 0.5831062670299727,
+            "recall": 0.5815217391304348,
+            "f1": 0.582312925170068,
+            "tn": 4040,
+            "fp": 306,
+            "fn": 308,
+            "tp": 428
+          }
+        }
+      },
+      "brierSkill": 0.19579957055482577,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.016677648576743614,
+        "lower": 0.004525976712018009,
+        "upper": 0.033996598549560456
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 3699,
+          "meanPrediction": 0.00832816897330166,
+          "observedRate": 0.013787510137875101
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 300,
+          "meanPrediction": 0.1489761730676538,
+          "observedRate": 0.18333333333333332
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 216,
+          "meanPrediction": 0.24574129133551412,
+          "observedRate": 0.4351851851851852
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 143,
+          "meanPrediction": 0.3408950468826915,
+          "observedRate": 0.44755244755244755
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 118,
+          "meanPrediction": 0.45295155985416574,
+          "observedRate": 0.4152542372881356
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 106,
+          "meanPrediction": 0.5434235280501517,
+          "observedRate": 0.5283018867924528
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 86,
+          "meanPrediction": 0.651651433325362,
+          "observedRate": 0.7558139534883721
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 134,
+          "meanPrediction": 0.7556265330897108,
+          "observedRate": 0.7164179104477612
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 184,
+          "meanPrediction": 0.8508858993442645,
+          "observedRate": 0.6902173913043478
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 96,
+          "meanPrediction": 0.9378149927792284,
+          "observedRate": 0.8229166666666666
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.1,
+          "precision": 0.4953000723065799,
+          "recall": 0.9307065217391305,
+          "f1": 0.6465313827277017,
+          "tn": 3648,
+          "fp": 698,
+          "fn": 51,
+          "tp": 685
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.2,
+          "precision": 0.5817174515235457,
+          "recall": 0.8559782608695652,
+          "f1": 0.6926882902693787,
+          "tn": 3893,
+          "fp": 453,
+          "fn": 106,
+          "tp": 630
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.3,
+          "precision": 0.6182237600922722,
+          "recall": 0.7282608695652174,
+          "f1": 0.6687461010605116,
+          "tn": 4015,
+          "fp": 331,
+          "fn": 200,
+          "tp": 536
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.4,
+          "precision": 0.6519337016574586,
+          "recall": 0.6413043478260869,
+          "f1": 0.6465753424657534,
+          "tn": 4094,
+          "fp": 252,
+          "fn": 264,
+          "tp": 472
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.5,
+          "precision": 0.698019801980198,
+          "recall": 0.5747282608695652,
+          "f1": 0.6304023845007451,
+          "tn": 4163,
+          "fp": 183,
+          "fn": 313,
+          "tp": 423
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.6,
+          "precision": 0.734,
+          "recall": 0.4986413043478261,
+          "f1": 0.5938511326860841,
+          "tn": 4213,
+          "fp": 133,
+          "fn": 369,
+          "tp": 367
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.7,
+          "precision": 0.7294685990338164,
+          "recall": 0.41032608695652173,
+          "f1": 0.525217391304348,
+          "tn": 4234,
+          "fp": 112,
+          "fn": 434,
+          "tp": 302
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.8,
+          "precision": 0.7357142857142858,
+          "recall": 0.2798913043478261,
+          "f1": 0.40551181102362205,
+          "tn": 4272,
+          "fp": 74,
+          "fn": 530,
+          "tp": 206
+        },
+        {
+          "n": 5082,
+          "events": 736,
+          "eventRate": 0.14482487209759937,
+          "brier": 0.06849949726420565,
+          "rocAuc": 0.945032851297545,
+          "averagePrecision": 0.6794140810498166,
+          "threshold": 0.9,
+          "precision": 0.8229166666666666,
+          "recall": 0.10733695652173914,
+          "f1": 0.18990384615384617,
+          "tn": 4329,
+          "fp": 17,
+          "fn": 657,
+          "tp": 79
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 1.951217503128481e-08,
+          "seasonalBrier": 7.557249329100504e-05
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 0,
+          "modelBrier": 1.3789040372448194e-06,
+          "seasonalBrier": 6.694925690274493e-05
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 1.6463990774564823e-05,
+          "seasonalBrier": 6.756250532667845e-05
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 0,
+          "modelBrier": 0.00022034419318734603,
+          "seasonalBrier": 0.00020357431907900168
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 82,
+          "modelBrier": 0.07237854467461248,
+          "seasonalBrier": 0.11342621453267286
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 182,
+          "modelBrier": 0.14518439991708929,
+          "seasonalBrier": 0.18400362139305948
+        },
+        {
+          "month": "2026-07",
+          "n": 651,
+          "events": 255,
+          "modelBrier": 0.1615295607809112,
+          "seasonalBrier": 0.19840124294489705
+        },
+        {
+          "month": "2026-08",
+          "n": 294,
+          "events": 105,
+          "modelBrier": 0.18194019531771985,
+          "seasonalBrier": 0.1746942403392158
+        },
+        {
+          "month": "2026-09",
+          "n": 336,
+          "events": 112,
+          "modelBrier": 0.15099202582222987,
+          "seasonalBrier": 0.18549819446509094
+        }
+      ]
+    },
+    "rain_7": {
+      "key": "rain_7",
+      "name": "Rain accumulation",
+      "horizon": 7,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15078,
+          "events": 2034,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7539,
+          "events": 1143,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 4830,
+          "events": 490,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7539,
+            "events": 1143,
+            "eventRate": 0.15161161957819339,
+            "brier": 0.12223823108378404,
+            "rocAuc": 0.6787366283717349,
+            "averagePrecision": 0.281094283656255,
+            "threshold": 0.13156797306304518,
+            "precision": 0.24717514124293785,
+            "recall": 0.6124234470691163,
+            "f1": 0.3522012578616352,
+            "tn": 4264,
+            "fp": 2132,
+            "fn": 443,
+            "tp": 700
+          },
+          "boosted": {
+            "n": 7539,
+            "events": 1143,
+            "eventRate": 0.15161161957819339,
+            "brier": 0.12825757325520543,
+            "rocAuc": 0.6357645334983533,
+            "averagePrecision": 0.25473068212544847,
+            "threshold": 0.1733729890504755,
+            "precision": 0.2572463768115942,
+            "recall": 0.37270341207349084,
+            "f1": 0.30439442658092175,
+            "tn": 5166,
+            "fp": 1230,
+            "fn": 717,
+            "tp": 426
+          },
+          "seasonal": {
+            "n": 7539,
+            "events": 1143,
+            "eventRate": 0.15161161957819339,
+            "brier": 0.122254513671941,
+            "rocAuc": 0.6965231304342117,
+            "averagePrecision": 0.26941525441973724,
+            "threshold": 0.16216216216216217,
+            "precision": 0.28728813559322036,
+            "recall": 0.5931758530183727,
+            "f1": 0.38709677419354843,
+            "tn": 4714,
+            "fp": 1682,
+            "fn": 465,
+            "tp": 678
+          },
+          "persistence": {
+            "n": 7539,
+            "events": 1143,
+            "eventRate": 0.15161161957819339,
+            "brier": 0.12596890704594574,
+            "rocAuc": 0.5750200256393843,
+            "averagePrecision": 0.18700129425490558,
+            "threshold": 0.258186995728524,
+            "precision": 0.27801911381407474,
+            "recall": 0.2799650043744532,
+            "f1": 0.2789886660854403,
+            "tn": 5565,
+            "fp": 831,
+            "fn": 823,
+            "tp": 320
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 4830,
+            "events": 490,
+            "eventRate": 0.10144927536231885,
+            "brier": 0.07631955378788872,
+            "rocAuc": 0.7621905859117841,
+            "averagePrecision": 0.40244132143160716,
+            "threshold": 0.13156797306304518,
+            "precision": 0.2264280798348245,
+            "recall": 0.6714285714285714,
+            "f1": 0.33865156973751925,
+            "tn": 3216,
+            "fp": 1124,
+            "fn": 161,
+            "tp": 329
+          },
+          "boosted": {
+            "n": 4830,
+            "events": 490,
+            "eventRate": 0.10144927536231885,
+            "brier": 0.088723563759018,
+            "rocAuc": 0.7477816702717954,
+            "averagePrecision": 0.20533254894372094,
+            "threshold": 0.1733729890504755,
+            "precision": 0.24645583424209377,
+            "recall": 0.46122448979591835,
+            "f1": 0.3212508884150675,
+            "tn": 3649,
+            "fp": 691,
+            "fn": 264,
+            "tp": 226
+          },
+          "seasonal": {
+            "n": 4830,
+            "events": 490,
+            "eventRate": 0.10144927536231885,
+            "brier": 0.09553846864975676,
+            "rocAuc": 0.6636998025016458,
+            "averagePrecision": 0.14993449577243695,
+            "threshold": 0.16216216216216217,
+            "precision": 0.19970631424375918,
+            "recall": 0.5551020408163265,
+            "f1": 0.2937365010799136,
+            "tn": 3250,
+            "fp": 1090,
+            "fn": 218,
+            "tp": 272
+          },
+          "persistence": {
+            "n": 4830,
+            "events": 490,
+            "eventRate": 0.10144927536231885,
+            "brier": 0.08568088527906144,
+            "rocAuc": 0.6563528637261357,
+            "averagePrecision": 0.2079505013786721,
+            "threshold": 0.258186995728524,
+            "precision": 0.3790322580645161,
+            "recall": 0.3836734693877551,
+            "f1": 0.3813387423935091,
+            "tn": 4032,
+            "fp": 308,
+            "fn": 302,
+            "tp": 188
+          }
+        }
+      },
+      "brierSkill": 0.2011641502474194,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.01921891486186805,
+        "lower": 0.009763611096068693,
+        "upper": 0.03071873854692796
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2498,
+          "meanPrediction": 0.06372171269225028,
+          "observedRate": 0.044435548438751
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 1792,
+          "meanPrediction": 0.13716487687703444,
+          "observedRate": 0.09933035714285714
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 335,
+          "meanPrediction": 0.2368929632243202,
+          "observedRate": 0.2626865671641791
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 74,
+          "meanPrediction": 0.34727903509925656,
+          "observedRate": 0.32432432432432434
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 38,
+          "meanPrediction": 0.4311081517077142,
+          "observedRate": 0.23684210526315788
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 24,
+          "meanPrediction": 0.5541862775286224,
+          "observedRate": 0.6666666666666666
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 24,
+          "meanPrediction": 0.6473509974970432,
+          "observedRate": 0.9583333333333334
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 25,
+          "meanPrediction": 0.7511541723764888,
+          "observedRate": 0.92
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 20,
+          "meanPrediction": 0.842219535770743,
+          "observedRate": 0.9
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "meanPrediction": null,
+          "observedRate": null
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.1,
+          "precision": 0.16252144082332762,
+          "recall": 0.773469387755102,
+          "f1": 0.2686038270729979,
+          "tn": 2387,
+          "fp": 1953,
+          "fn": 111,
+          "tp": 379
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.2,
+          "precision": 0.37222222222222223,
+          "recall": 0.41020408163265304,
+          "f1": 0.3902912621359223,
+          "tn": 4001,
+          "fp": 339,
+          "fn": 289,
+          "tp": 201
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.3,
+          "precision": 0.551219512195122,
+          "recall": 0.23061224489795917,
+          "f1": 0.3251798561151079,
+          "tn": 4248,
+          "fp": 92,
+          "fn": 377,
+          "tp": 113
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.4,
+          "precision": 0.6793893129770993,
+          "recall": 0.1816326530612245,
+          "f1": 0.286634460547504,
+          "tn": 4298,
+          "fp": 42,
+          "fn": 401,
+          "tp": 89
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.5,
+          "precision": 0.8602150537634409,
+          "recall": 0.16326530612244897,
+          "f1": 0.27444253859348194,
+          "tn": 4327,
+          "fp": 13,
+          "fn": 410,
+          "tp": 80
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.6,
+          "precision": 0.927536231884058,
+          "recall": 0.1306122448979592,
+          "f1": 0.22898032200357785,
+          "tn": 4335,
+          "fp": 5,
+          "fn": 426,
+          "tp": 64
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.7,
+          "precision": 0.9111111111111111,
+          "recall": 0.0836734693877551,
+          "f1": 0.15327102803738318,
+          "tn": 4336,
+          "fp": 4,
+          "fn": 449,
+          "tp": 41
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.8,
+          "precision": 0.9,
+          "recall": 0.036734693877551024,
+          "f1": 0.07058823529411765,
+          "tn": 4338,
+          "fp": 2,
+          "fn": 472,
+          "tp": 18
+        },
+        {
+          "n": 4830,
+          "events": 490,
+          "eventRate": 0.10144927536231885,
+          "brier": 0.07631955378788872,
+          "rocAuc": 0.7621905859117841,
+          "averagePrecision": 0.40244132143160716,
+          "threshold": 0.9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "tn": 4340,
+          "fp": 0,
+          "fn": 490,
+          "tp": 0
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 205,
+          "modelBrier": 0.220299573149312,
+          "seasonalBrier": 0.23219690775077506
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 138,
+          "modelBrier": 0.11174681221847521,
+          "seasonalBrier": 0.16743066763492068
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 41,
+          "modelBrier": 0.059273689538917845,
+          "seasonalBrier": 0.06684456488899806
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 7,
+          "modelBrier": 0.01745060504394716,
+          "seasonalBrier": 0.021834790975009497
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 60,
+          "modelBrier": 0.08360178731061368,
+          "seasonalBrier": 0.09159945237535785
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 37,
+          "modelBrier": 0.05851815189940921,
+          "seasonalBrier": 0.06703778719257387
+        },
+        {
+          "month": "2026-07",
+          "n": 588,
+          "events": 1,
+          "modelBrier": 0.016441679081319167,
+          "seasonalBrier": 0.05848212073591144
+        },
+        {
+          "month": "2026-08",
+          "n": 189,
+          "events": 1,
+          "modelBrier": 0.02316895549193129,
+          "seasonalBrier": 0.05212238959637501
+        },
+        {
+          "month": "2026-09",
+          "n": 252,
+          "events": 0,
+          "modelBrier": 0.018184146427328466,
+          "seasonalBrier": 0.0335951823497349
+        }
+      ]
+    },
+    "heat_7": {
+      "key": "heat_7",
+      "name": "Heat exposure",
+      "horizon": 7,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15078,
+          "events": 2060,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7539,
+          "events": 1255,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 4830,
+          "events": 1074,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7539,
+            "events": 1255,
+            "eventRate": 0.1664677012866428,
+            "brier": 0.05444414810485977,
+            "rocAuc": 0.9685823225240349,
+            "averagePrecision": 0.855633934088733,
+            "threshold": 0.2258417776453937,
+            "precision": 0.7041149575440888,
+            "recall": 0.8589641434262948,
+            "f1": 0.7738693467336683,
+            "tn": 5831,
+            "fp": 453,
+            "fn": 177,
+            "tp": 1078
+          },
+          "boosted": {
+            "n": 7539,
+            "events": 1255,
+            "eventRate": 0.1664677012866428,
+            "brier": 0.05656740842672598,
+            "rocAuc": 0.9663113301092257,
+            "averagePrecision": 0.8418489151954393,
+            "threshold": 0.26064882951503515,
+            "precision": 0.7287899860917941,
+            "recall": 0.8350597609561753,
+            "f1": 0.7783141477905681,
+            "tn": 5894,
+            "fp": 390,
+            "fn": 207,
+            "tp": 1048
+          },
+          "seasonal": {
+            "n": 7539,
+            "events": 1255,
+            "eventRate": 0.1664677012866428,
+            "brier": 0.06850563889864922,
+            "rocAuc": 0.9340833990581278,
+            "averagePrecision": 0.7298187251578966,
+            "threshold": 0.27419354838709675,
+            "precision": 0.7249647390691114,
+            "recall": 0.8191235059760956,
+            "f1": 0.7691732136176579,
+            "tn": 5894,
+            "fp": 390,
+            "fn": 227,
+            "tp": 1028
+          },
+          "persistence": {
+            "n": 7539,
+            "events": 1255,
+            "eventRate": 0.1664677012866428,
+            "brier": 0.07565521258150641,
+            "rocAuc": 0.8379669736077968,
+            "averagePrecision": 0.5776916881788517,
+            "threshold": 0.6891367604267701,
+            "precision": 0.7298804780876494,
+            "recall": 0.7298804780876494,
+            "f1": 0.7298804780876496,
+            "tn": 5945,
+            "fp": 339,
+            "fn": 339,
+            "tp": 916
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 4830,
+            "events": 1074,
+            "eventRate": 0.22236024844720498,
+            "brier": 0.07165713863331409,
+            "rocAuc": 0.954737596753946,
+            "averagePrecision": 0.8562217832752788,
+            "threshold": 0.2258417776453937,
+            "precision": 0.7207278481012658,
+            "recall": 0.8482309124767226,
+            "f1": 0.7792985457656115,
+            "tn": 3403,
+            "fp": 353,
+            "fn": 163,
+            "tp": 911
+          },
+          "boosted": {
+            "n": 4830,
+            "events": 1074,
+            "eventRate": 0.22236024844720498,
+            "brier": 0.07865289480414385,
+            "rocAuc": 0.9490119347219496,
+            "averagePrecision": 0.8617439029847198,
+            "threshold": 0.26064882951503515,
+            "precision": 0.744122965641953,
+            "recall": 0.7662942271880819,
+            "f1": 0.7550458715596331,
+            "tn": 3473,
+            "fp": 283,
+            "fn": 251,
+            "tp": 823
+          },
+          "seasonal": {
+            "n": 4830,
+            "events": 1074,
+            "eventRate": 0.22236024844720498,
+            "brier": 0.09309445896801002,
+            "rocAuc": 0.9287571914731587,
+            "averagePrecision": 0.8251677261585106,
+            "threshold": 0.27419354838709675,
+            "precision": 0.8027571580063627,
+            "recall": 0.7048417132216015,
+            "f1": 0.7506197322756569,
+            "tn": 3570,
+            "fp": 186,
+            "fn": 317,
+            "tp": 757
+          },
+          "persistence": {
+            "n": 4830,
+            "events": 1074,
+            "eventRate": 0.22236024844720498,
+            "brier": 0.10766288158869573,
+            "rocAuc": 0.8041070971733867,
+            "averagePrecision": 0.5649374570858662,
+            "threshold": 0.6891367604267701,
+            "precision": 0.724308300395257,
+            "recall": 0.6824953445065177,
+            "f1": 0.7027804410354747,
+            "tn": 3477,
+            "fp": 279,
+            "fn": 341,
+            "tp": 733
+          }
+        }
+      },
+      "brierSkill": 0.2302749333562637,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.021437320334695916,
+        "lower": 4.737802610273447e-05,
+        "upper": 0.04476047090538865
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 3382,
+          "meanPrediction": 0.007581974525364184,
+          "observedRate": 0.028681253696037846
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 170,
+          "meanPrediction": 0.1382821609075351,
+          "observedRate": 0.34705882352941175
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 68,
+          "meanPrediction": 0.25493222389010284,
+          "observedRate": 0.19117647058823528
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 110,
+          "meanPrediction": 0.35473825267299863,
+          "observedRate": 0.43636363636363634
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 97,
+          "meanPrediction": 0.45762879525128103,
+          "observedRate": 0.5051546391752577
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 153,
+          "meanPrediction": 0.5494954524255805,
+          "observedRate": 0.5686274509803921
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 131,
+          "meanPrediction": 0.6491605572063927,
+          "observedRate": 0.7862595419847328
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 117,
+          "meanPrediction": 0.7468288953241035,
+          "observedRate": 0.7777777777777778
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 164,
+          "meanPrediction": 0.853406640457248,
+          "observedRate": 0.7134146341463414
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 438,
+          "meanPrediction": 0.9643684153188907,
+          "observedRate": 0.9360730593607306
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.1,
+          "precision": 0.6747237569060773,
+          "recall": 0.909683426443203,
+          "f1": 0.774781919111816,
+          "tn": 3285,
+          "fp": 471,
+          "fn": 97,
+          "tp": 977
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.2,
+          "precision": 0.7183098591549296,
+          "recall": 0.8547486033519553,
+          "f1": 0.7806122448979592,
+          "tn": 3396,
+          "fp": 360,
+          "fn": 156,
+          "tp": 918
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.3,
+          "precision": 0.7479338842975206,
+          "recall": 0.8426443202979516,
+          "f1": 0.7924693520140105,
+          "tn": 3451,
+          "fp": 305,
+          "fn": 169,
+          "tp": 905
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.4,
+          "precision": 0.7790909090909091,
+          "recall": 0.797951582867784,
+          "f1": 0.7884084636614536,
+          "tn": 3513,
+          "fp": 243,
+          "fn": 217,
+          "tp": 857
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.5,
+          "precision": 0.8055832502492523,
+          "recall": 0.7523277467411545,
+          "f1": 0.7780452575830524,
+          "tn": 3561,
+          "fp": 195,
+          "fn": 266,
+          "tp": 808
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.6,
+          "precision": 0.8482352941176471,
+          "recall": 0.6713221601489758,
+          "f1": 0.7494802494802495,
+          "tn": 3627,
+          "fp": 129,
+          "fn": 353,
+          "tp": 721
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.7,
+          "precision": 0.8595271210013908,
+          "recall": 0.5754189944134078,
+          "f1": 0.6893474623535973,
+          "tn": 3655,
+          "fp": 101,
+          "fn": 456,
+          "tp": 618
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.8,
+          "precision": 0.8754152823920266,
+          "recall": 0.49068901303538176,
+          "f1": 0.6288782816229117,
+          "tn": 3681,
+          "fp": 75,
+          "fn": 547,
+          "tp": 527
+        },
+        {
+          "n": 4830,
+          "events": 1074,
+          "eventRate": 0.22236024844720498,
+          "brier": 0.07165713863331409,
+          "rocAuc": 0.954737596753946,
+          "averagePrecision": 0.8562217832752788,
+          "threshold": 0.9,
+          "precision": 0.9360730593607306,
+          "recall": 0.3817504655493482,
+          "f1": 0.5423280423280423,
+          "tn": 3728,
+          "fp": 28,
+          "fn": 664,
+          "tp": 410
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 2.6150794448521852e-09,
+          "seasonalBrier": 8.030909405289687e-05
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 0,
+          "modelBrier": 5.316184550440584e-07,
+          "seasonalBrier": 6.694925690274493e-05
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 1.1784874720216645e-05,
+          "seasonalBrier": 0.00010893022076865198
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 0,
+          "modelBrier": 0.0011058806697559923,
+          "seasonalBrier": 0.0012698619163239349
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 157,
+          "modelBrier": 0.15111479578029596,
+          "seasonalBrier": 0.18649378367707728
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 320,
+          "modelBrier": 0.17261835403492948,
+          "seasonalBrier": 0.21015311431544523
+        },
+        {
+          "month": "2026-07",
+          "n": 588,
+          "events": 361,
+          "modelBrier": 0.17415592300488267,
+          "seasonalBrier": 0.23490192773259144
+        },
+        {
+          "month": "2026-08",
+          "n": 189,
+          "events": 107,
+          "modelBrier": 0.09143760557012734,
+          "seasonalBrier": 0.09788084501924252
+        },
+        {
+          "month": "2026-09",
+          "n": 252,
+          "events": 129,
+          "modelBrier": 0.07376429863034278,
+          "seasonalBrier": 0.15181720017177877
+        }
+      ]
+    },
+    "dry_7": {
+      "key": "dry_7",
+      "name": "Low rainfall",
+      "horizon": 7,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15078,
+          "events": 5309,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7539,
+          "events": 2985,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 4830,
+          "events": 2080,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7539,
+            "events": 2985,
+            "eventRate": 0.39594110624751294,
+            "brier": 0.218796126544844,
+            "rocAuc": 0.6805116932929911,
+            "averagePrecision": 0.5930420366224339,
+            "threshold": 0.22813656502106275,
+            "precision": 0.46716697936210133,
+            "recall": 0.8341708542713567,
+            "f1": 0.5989176187612748,
+            "tn": 1714,
+            "fp": 2840,
+            "fn": 495,
+            "tp": 2490
+          },
+          "boosted": {
+            "n": 7539,
+            "events": 2985,
+            "eventRate": 0.39594110624751294,
+            "brier": 0.22168791986099448,
+            "rocAuc": 0.6697447124364317,
+            "averagePrecision": 0.6079311498933868,
+            "threshold": 0.24112936959917572,
+            "precision": 0.48365002209456476,
+            "recall": 0.7333333333333333,
+            "f1": 0.5828784449474104,
+            "tn": 2217,
+            "fp": 2337,
+            "fn": 796,
+            "tp": 2189
+          },
+          "seasonal": {
+            "n": 7539,
+            "events": 2985,
+            "eventRate": 0.39594110624751294,
+            "brier": 0.23795852861267805,
+            "rocAuc": 0.5812850668214444,
+            "averagePrecision": 0.5579139536372691,
+            "threshold": 0.024193548387096774,
+            "precision": 0.39594110624751294,
+            "recall": 1.0,
+            "f1": 0.5672748004561003,
+            "tn": 0,
+            "fp": 4554,
+            "fn": 0,
+            "tp": 2985
+          },
+          "persistence": {
+            "n": 7539,
+            "events": 2985,
+            "eventRate": 0.39594110624751294,
+            "brier": 0.23265948988996613,
+            "rocAuc": 0.600380139608892,
+            "averagePrecision": 0.45881326235247477,
+            "threshold": 0.24847498983326555,
+            "precision": 0.39594110624751294,
+            "recall": 1.0,
+            "f1": 0.5672748004561003,
+            "tn": 0,
+            "fp": 4554,
+            "fn": 0,
+            "tp": 2985
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 4830,
+            "events": 2080,
+            "eventRate": 0.4306418219461698,
+            "brier": 0.2220161719348649,
+            "rocAuc": 0.6919451923076924,
+            "averagePrecision": 0.6007331172003186,
+            "threshold": 0.22813656502106275,
+            "precision": 0.49958088851634536,
+            "recall": 0.8596153846153847,
+            "f1": 0.631913765682983,
+            "tn": 959,
+            "fp": 1791,
+            "fn": 292,
+            "tp": 1788
+          },
+          "boosted": {
+            "n": 4830,
+            "events": 2080,
+            "eventRate": 0.4306418219461698,
+            "brier": 0.2235586121320918,
+            "rocAuc": 0.7066293706293707,
+            "averagePrecision": 0.6230804093538155,
+            "threshold": 0.24112936959917572,
+            "precision": 0.5480737018425461,
+            "recall": 0.7865384615384615,
+            "f1": 0.6460019743336624,
+            "tn": 1401,
+            "fp": 1349,
+            "fn": 444,
+            "tp": 1636
+          },
+          "seasonal": {
+            "n": 4830,
+            "events": 2080,
+            "eventRate": 0.4306418219461698,
+            "brier": 0.25777355378661204,
+            "rocAuc": 0.5595723776223777,
+            "averagePrecision": 0.5767980745232613,
+            "threshold": 0.024193548387096774,
+            "precision": 0.4306418219461698,
+            "recall": 1.0,
+            "f1": 0.6020260492040521,
+            "tn": 0,
+            "fp": 2750,
+            "fn": 0,
+            "tp": 2080
+          },
+          "persistence": {
+            "n": 4830,
+            "events": 2080,
+            "eventRate": 0.4306418219461698,
+            "brier": 0.23551194025623445,
+            "rocAuc": 0.6169667832167832,
+            "averagePrecision": 0.5054052498294705,
+            "threshold": 0.24847498983326555,
+            "precision": 0.4306418219461698,
+            "recall": 1.0,
+            "f1": 0.6020260492040521,
+            "tn": 0,
+            "fp": 2750,
+            "fn": 0,
+            "tp": 2080
+          }
+        }
+      },
+      "brierSkill": 0.13871625434992263,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.03575738185174715,
+        "lower": 0.016480155724211305,
+        "upper": 0.05904037629285629
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 349,
+          "meanPrediction": 0.04990323445438626,
+          "observedRate": 0.1518624641833811
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 664,
+          "meanPrediction": 0.1544236052865467,
+          "observedRate": 0.25150602409638556
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 765,
+          "meanPrediction": 0.2508635507862885,
+          "observedRate": 0.29934640522875816
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 819,
+          "meanPrediction": 0.35100975129841666,
+          "observedRate": 0.4004884004884005
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 782,
+          "meanPrediction": 0.44805258005604026,
+          "observedRate": 0.479539641943734
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 752,
+          "meanPrediction": 0.5470868227970448,
+          "observedRate": 0.6050531914893617
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 513,
+          "meanPrediction": 0.648633822496026,
+          "observedRate": 0.6861598440545809
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 181,
+          "meanPrediction": 0.7316248418466914,
+          "observedRate": 0.6408839779005525
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 5,
+          "meanPrediction": 0.8061525943869692,
+          "observedRate": 1.0
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "meanPrediction": null,
+          "observedRate": null
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.1,
+          "precision": 0.45235438518187904,
+          "recall": 0.9745192307692307,
+          "f1": 0.6178936137783875,
+          "tn": 296,
+          "fp": 2454,
+          "fn": 53,
+          "tp": 2027
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.2,
+          "precision": 0.48729368614094837,
+          "recall": 0.8942307692307693,
+          "f1": 0.6308292352043412,
+          "tn": 793,
+          "fp": 1957,
+          "fn": 220,
+          "tp": 1860
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.3,
+          "precision": 0.5344036697247706,
+          "recall": 0.7841346153846154,
+          "f1": 0.6356196414653156,
+          "tn": 1329,
+          "fp": 1421,
+          "fn": 449,
+          "tp": 1631
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.4,
+          "precision": 0.5835199283475145,
+          "recall": 0.6264423076923077,
+          "f1": 0.6042198006028285,
+          "tn": 1820,
+          "fp": 930,
+          "fn": 777,
+          "tp": 1303
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.5,
+          "precision": 0.6395589248793935,
+          "recall": 0.4461538461538462,
+          "f1": 0.5256301331067685,
+          "tn": 2227,
+          "fp": 523,
+          "fn": 1152,
+          "tp": 928
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.6,
+          "precision": 0.6766809728183119,
+          "recall": 0.22740384615384615,
+          "f1": 0.3404102195034185,
+          "tn": 2524,
+          "fp": 226,
+          "fn": 1607,
+          "tp": 473
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.7,
+          "precision": 0.6505376344086021,
+          "recall": 0.058173076923076925,
+          "f1": 0.10679611650485436,
+          "tn": 2685,
+          "fp": 65,
+          "fn": 1959,
+          "tp": 121
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.8,
+          "precision": 1.0,
+          "recall": 0.002403846153846154,
+          "f1": 0.004796163069544364,
+          "tn": 2750,
+          "fp": 0,
+          "fn": 2075,
+          "tp": 5
+        },
+        {
+          "n": 4830,
+          "events": 2080,
+          "eventRate": 0.4306418219461698,
+          "brier": 0.2220161719348649,
+          "rocAuc": 0.6919451923076924,
+          "averagePrecision": 0.6007331172003186,
+          "threshold": 0.9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "tn": 2750,
+          "fp": 0,
+          "fn": 2080,
+          "tp": 0
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 110,
+          "modelBrier": 0.15995751504426614,
+          "seasonalBrier": 0.2403933729108985
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 185,
+          "modelBrier": 0.20473875723896306,
+          "seasonalBrier": 0.23805942895868384
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 188,
+          "modelBrier": 0.21327999355946037,
+          "seasonalBrier": 0.20297779952648917
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 343,
+          "modelBrier": 0.29303156334129216,
+          "seasonalBrier": 0.3425547751185108
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 289,
+          "modelBrier": 0.23449201626125202,
+          "seasonalBrier": 0.2916068251677161
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 340,
+          "modelBrier": 0.23257811885378998,
+          "seasonalBrier": 0.2798549171663116
+        },
+        {
+          "month": "2026-07",
+          "n": 588,
+          "events": 427,
+          "modelBrier": 0.23281764215414646,
+          "seasonalBrier": 0.2692998895708127
+        },
+        {
+          "month": "2026-08",
+          "n": 189,
+          "events": 74,
+          "modelBrier": 0.2339234932348589,
+          "seasonalBrier": 0.1734049903925034
+        },
+        {
+          "month": "2026-09",
+          "n": 252,
+          "events": 124,
+          "modelBrier": 0.17491026551927794,
+          "seasonalBrier": 0.172050237021621
+        }
+      ]
+    },
+    "compound_7": {
+      "key": "compound_7",
+      "name": "Hot and dry",
+      "horizon": 7,
+      "selected": "logistic",
+      "features": [
+        "Temperature mean",
+        "Temperature minimum",
+        "Temperature maximum",
+        "Relative humidity",
+        "Daily rainfall",
+        "Mean wind",
+        "Maximum wind",
+        "Surface pressure",
+        "Cloud cover",
+        "Solar radiation",
+        "Previous rainfall",
+        "Log rainfall",
+        "Rain 3d",
+        "Rain 7d",
+        "Mean temperature 3d",
+        "Mean temperature 7d",
+        "Maximum temperature 7d",
+        "Humidity 3d",
+        "Humidity 7d",
+        "Pressure change 1d",
+        "Pressure change 3d",
+        "Temperature change 1d",
+        "Maximum wind 7d",
+        "Season sine",
+        "Season cosine"
+      ],
+      "split": {
+        "train": {
+          "n": 15078,
+          "events": 1397,
+          "targetStart": "2023-01-08",
+          "targetEnd": "2024-12-31"
+        },
+        "validation": {
+          "n": 7539,
+          "events": 854,
+          "targetStart": "2025-01-01",
+          "targetEnd": "2025-12-31"
+        },
+        "test": {
+          "n": 4830,
+          "events": 788,
+          "targetStart": "2026-01-01",
+          "targetEnd": "2026-09-21"
+        }
+      },
+      "metrics": {
+        "validation": {
+          "logistic": {
+            "n": 7539,
+            "events": 854,
+            "eventRate": 0.11327762302692665,
+            "brier": 0.05854761977812528,
+            "rocAuc": 0.9423801758279486,
+            "averagePrecision": 0.619852543864125,
+            "threshold": 0.18435951960364586,
+            "precision": 0.5206258890469416,
+            "recall": 0.8571428571428571,
+            "f1": 0.647787610619469,
+            "tn": 6011,
+            "fp": 674,
+            "fn": 122,
+            "tp": 732
+          },
+          "boosted": {
+            "n": 7539,
+            "events": 854,
+            "eventRate": 0.11327762302692665,
+            "brier": 0.060197066867786565,
+            "rocAuc": 0.943577935852051,
+            "averagePrecision": 0.6195386544036235,
+            "threshold": 0.138557540843227,
+            "precision": 0.5041322314049587,
+            "recall": 0.8571428571428571,
+            "f1": 0.634865568083261,
+            "tn": 5965,
+            "fp": 720,
+            "fn": 122,
+            "tp": 732
+          },
+          "seasonal": {
+            "n": 7539,
+            "events": 854,
+            "eventRate": 0.11327762302692665,
+            "brier": 0.06417021397885304,
+            "rocAuc": 0.9065859285092459,
+            "averagePrecision": 0.6014810294241075,
+            "threshold": 0.20967741935483872,
+            "precision": 0.5253067484662577,
+            "recall": 0.8021077283372365,
+            "f1": 0.6348470806302132,
+            "tn": 6066,
+            "fp": 619,
+            "fn": 169,
+            "tp": 685
+          },
+          "persistence": {
+            "n": 7539,
+            "events": 854,
+            "eventRate": 0.11327762302692665,
+            "brier": 0.07082783468103078,
+            "rocAuc": 0.7768272496536165,
+            "averagePrecision": 0.4099098503830554,
+            "threshold": 0.5025017869907077,
+            "precision": 0.6042154566744731,
+            "recall": 0.6042154566744731,
+            "f1": 0.6042154566744731,
+            "tn": 6347,
+            "fp": 338,
+            "fn": 338,
+            "tp": 516
+          }
+        },
+        "test": {
+          "logistic": {
+            "n": 4830,
+            "events": 788,
+            "eventRate": 0.16314699792960663,
+            "brier": 0.09258690796186783,
+            "rocAuc": 0.9064822535961239,
+            "averagePrecision": 0.5507707199442345,
+            "threshold": 0.18435951960364586,
+            "precision": 0.5441426146010186,
+            "recall": 0.8134517766497462,
+            "f1": 0.6520854526958291,
+            "tn": 3505,
+            "fp": 537,
+            "fn": 147,
+            "tp": 641
+          },
+          "boosted": {
+            "n": 4830,
+            "events": 788,
+            "eventRate": 0.16314699792960663,
+            "brier": 0.10323458191199401,
+            "rocAuc": 0.8987716539784043,
+            "averagePrecision": 0.5487299165046162,
+            "threshold": 0.138557540843227,
+            "precision": 0.5301318267419962,
+            "recall": 0.7144670050761421,
+            "f1": 0.6086486486486486,
+            "tn": 3543,
+            "fp": 499,
+            "fn": 225,
+            "tp": 563
+          },
+          "seasonal": {
+            "n": 4830,
+            "events": 788,
+            "eventRate": 0.16314699792960663,
+            "brier": 0.09563425910287643,
+            "rocAuc": 0.8855307657916747,
+            "averagePrecision": 0.5896868468864884,
+            "threshold": 0.20967741935483872,
+            "precision": 0.6255868544600939,
+            "recall": 0.6763959390862944,
+            "f1": 0.6499999999999999,
+            "tn": 3723,
+            "fp": 319,
+            "fn": 255,
+            "tp": 533
+          },
+          "persistence": {
+            "n": 4830,
+            "events": 788,
+            "eventRate": 0.16314699792960663,
+            "brier": 0.11541992927286115,
+            "rocAuc": 0.7035043841692683,
+            "averagePrecision": 0.3365227341576552,
+            "threshold": 0.5025017869907077,
+            "precision": 0.509020618556701,
+            "recall": 0.501269035532995,
+            "f1": 0.5051150895140665,
+            "tn": 3661,
+            "fp": 381,
+            "fn": 393,
+            "tp": 395
+          }
+        }
+      },
+      "brierSkill": 0.03186463898601943,
+      "interval": {
+        "method": "Moving-block bootstrap; all weather groups retained together by target day",
+        "blockCalendarDays": 7,
+        "resamples": 300,
+        "seed": 42,
+        "estimate": 0.0030473511410085952,
+        "lower": -0.009994776416840727,
+        "upper": 0.01808988055873791
+      },
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 3476,
+          "meanPrediction": 0.009497469788888007,
+          "observedRate": 0.029344073647871116
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 196,
+          "meanPrediction": 0.14200441830395655,
+          "observedRate": 0.2755102040816326
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 201,
+          "meanPrediction": 0.24715258156457806,
+          "observedRate": 0.39303482587064675
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 214,
+          "meanPrediction": 0.34613785114471174,
+          "observedRate": 0.5233644859813084
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 174,
+          "meanPrediction": 0.45117428711338325,
+          "observedRate": 0.632183908045977
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 179,
+          "meanPrediction": 0.5448521806142476,
+          "observedRate": 0.5027932960893855
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 164,
+          "meanPrediction": 0.6503248019775175,
+          "observedRate": 0.6829268292682927
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 159,
+          "meanPrediction": 0.7450804925059928,
+          "observedRate": 0.6289308176100629
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 52,
+          "meanPrediction": 0.8460571763645974,
+          "observedRate": 0.36538461538461536
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 15,
+          "meanPrediction": 0.905285120295766,
+          "observedRate": 0.6666666666666666
+        }
+      ],
+      "thresholds": [
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.1,
+          "precision": 0.5066469719350074,
+          "recall": 0.8705583756345178,
+          "f1": 0.6405228758169935,
+          "tn": 3374,
+          "fp": 668,
+          "fn": 102,
+          "tp": 686
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.2,
+          "precision": 0.5457685664939551,
+          "recall": 0.8020304568527918,
+          "f1": 0.6495375128468653,
+          "tn": 3516,
+          "fp": 526,
+          "fn": 156,
+          "tp": 632
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.3,
+          "precision": 0.5778474399164054,
+          "recall": 0.7017766497461929,
+          "f1": 0.633810888252149,
+          "tn": 3638,
+          "fp": 404,
+          "fn": 235,
+          "tp": 553
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.4,
+          "precision": 0.5935397039030955,
+          "recall": 0.5596446700507615,
+          "f1": 0.5760940561724364,
+          "tn": 3740,
+          "fp": 302,
+          "fn": 347,
+          "tp": 441
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.5,
+          "precision": 0.5817223198594025,
+          "recall": 0.4200507614213198,
+          "f1": 0.4878408253500369,
+          "tn": 3804,
+          "fp": 238,
+          "fn": 457,
+          "tp": 331
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.6,
+          "precision": 0.617948717948718,
+          "recall": 0.30583756345177665,
+          "f1": 0.4091680814940577,
+          "tn": 3893,
+          "fp": 149,
+          "fn": 547,
+          "tp": 241
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.7,
+          "precision": 0.5707964601769911,
+          "recall": 0.16370558375634517,
+          "f1": 0.25443786982248523,
+          "tn": 3945,
+          "fp": 97,
+          "fn": 659,
+          "tp": 129
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.8,
+          "precision": 0.43283582089552236,
+          "recall": 0.03680203045685279,
+          "f1": 0.06783625730994153,
+          "tn": 4004,
+          "fp": 38,
+          "fn": 759,
+          "tp": 29
+        },
+        {
+          "n": 4830,
+          "events": 788,
+          "eventRate": 0.16314699792960663,
+          "brier": 0.09258690796186783,
+          "rocAuc": 0.9064822535961239,
+          "averagePrecision": 0.5507707199442345,
+          "threshold": 0.9,
+          "precision": 0.6666666666666666,
+          "recall": 0.012690355329949238,
+          "f1": 0.024906600249066005,
+          "tn": 4037,
+          "fp": 5,
+          "fn": 778,
+          "tp": 10
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2026-01",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 1.3639177070988164e-07,
+          "seasonalBrier": 8.030909405289687e-05
+        },
+        {
+          "month": "2026-02",
+          "n": 588,
+          "events": 0,
+          "modelBrier": 4.0972520787435464e-06,
+          "seasonalBrier": 6.694925690274493e-05
+        },
+        {
+          "month": "2026-03",
+          "n": 651,
+          "events": 0,
+          "modelBrier": 1.8097815443960318e-05,
+          "seasonalBrier": 0.00010893022076865198
+        },
+        {
+          "month": "2026-04",
+          "n": 630,
+          "events": 0,
+          "modelBrier": 0.000700345739651646,
+          "seasonalBrier": 0.0012698619163239349
+        },
+        {
+          "month": "2026-05",
+          "n": 651,
+          "events": 144,
+          "modelBrier": 0.1638592439598313,
+          "seasonalBrier": 0.18920503315958317
+        },
+        {
+          "month": "2026-06",
+          "n": 630,
+          "events": 218,
+          "modelBrier": 0.2265385127754019,
+          "seasonalBrier": 0.2075248170721636
+        },
+        {
+          "month": "2026-07",
+          "n": 588,
+          "events": 256,
+          "modelBrier": 0.20997663883904122,
+          "seasonalBrier": 0.22766220171731547
+        },
+        {
+          "month": "2026-08",
+          "n": 189,
+          "events": 65,
+          "modelBrier": 0.20149738486669863,
+          "seasonalBrier": 0.13252254595907043
+        },
+        {
+          "month": "2026-09",
+          "n": 252,
+          "events": 105,
+          "modelBrier": 0.1420570148539937,
+          "seasonalBrier": 0.19097480303255537
+        }
+      ]
+    }
+  },
+  "geographic": [
+    {
+      "city": "Benevento",
+      "selected": "logistic",
+      "trainingCities": [
+        "Coimbra",
+        "Ghent",
+        "Oslo",
+        "Toulouse"
+      ],
+      "trainRows": 12996,
+      "validationRows": 6534,
+      "test": {
+        "logistic": {
+          "n": 726,
+          "events": 84,
+          "eventRate": 0.11570247933884298,
+          "brier": 0.1089310058632421,
+          "rocAuc": 0.6661938139741879,
+          "averagePrecision": 0.22766279754831825,
+          "threshold": 0.1691651202718562,
+          "precision": 0.16578947368421051,
+          "recall": 0.75,
+          "f1": 0.27155172413793105,
+          "tn": 325,
+          "fp": 317,
+          "fn": 21,
+          "tp": 63
+        },
+        "boosted": {
+          "n": 726,
+          "events": 84,
+          "eventRate": 0.11570247933884298,
+          "brier": 0.10666709376571329,
+          "rocAuc": 0.6722759976264651,
+          "averagePrecision": 0.16868005079381515,
+          "threshold": 0.09421509682463805,
+          "precision": 0.17480719794344474,
+          "recall": 0.8095238095238095,
+          "f1": 0.2875264270613108,
+          "tn": 321,
+          "fp": 321,
+          "fn": 16,
+          "tp": 68
+        },
+        "seasonal": {
+          "n": 726,
+          "events": 84,
+          "eventRate": 0.11570247933884298,
+          "brier": 0.10423455851053415,
+          "rocAuc": 0.4344959946595461,
+          "averagePrecision": 0.09847091226868615,
+          "threshold": 0.07142857142857142,
+          "precision": 0.11570247933884298,
+          "recall": 1.0,
+          "f1": 0.2074074074074074,
+          "tn": 0,
+          "fp": 642,
+          "fn": 0,
+          "tp": 84
+        },
+        "persistence": {
+          "n": 726,
+          "events": 84,
+          "eventRate": 0.11570247933884298,
+          "brier": 0.0998136501719925,
+          "rocAuc": 0.5826657765910102,
+          "averagePrecision": 0.1539935533442027,
+          "threshold": 0.2331360946745562,
+          "precision": 0.2619047619047619,
+          "recall": 0.2619047619047619,
+          "f1": 0.2619047619047619,
+          "tn": 580,
+          "fp": 62,
+          "fn": 62,
+          "tp": 22
+        }
+      },
+      "skill": -0.045056528466356216
+    },
+    {
+      "city": "Coimbra",
+      "selected": "logistic",
+      "trainingCities": [
+        "Benevento",
+        "Ghent",
+        "Oslo",
+        "Toulouse"
+      ],
+      "trainRows": 11552,
+      "validationRows": 5808,
+      "test": {
+        "logistic": {
+          "n": 1210,
+          "events": 202,
+          "eventRate": 0.1669421487603306,
+          "brier": 0.11332358719940633,
+          "rocAuc": 0.8434111268269684,
+          "averagePrecision": 0.6185564700740859,
+          "threshold": 0.14669158275982624,
+          "precision": 0.45569620253164556,
+          "recall": 0.7128712871287128,
+          "f1": 0.555984555984556,
+          "tn": 836,
+          "fp": 172,
+          "fn": 58,
+          "tp": 144
+        },
+        "boosted": {
+          "n": 1210,
+          "events": 202,
+          "eventRate": 0.1669421487603306,
+          "brier": 0.13040176363833944,
+          "rocAuc": 0.8161392032060348,
+          "averagePrecision": 0.3887668739555937,
+          "threshold": 0.0901785640171261,
+          "precision": 0.36492890995260663,
+          "recall": 0.7623762376237624,
+          "f1": 0.49358974358974356,
+          "tn": 740,
+          "fp": 268,
+          "fn": 48,
+          "tp": 154
+        },
+        "seasonal": {
+          "n": 1210,
+          "events": 202,
+          "eventRate": 0.1669421487603306,
+          "brier": 0.14425711481826353,
+          "rocAuc": 0.49760578736445077,
+          "averagePrecision": 0.15507489566413843,
+          "threshold": 0.11156601842374617,
+          "precision": 0.1849624060150376,
+          "recall": 0.6089108910891089,
+          "f1": 0.2837370242214533,
+          "tn": 466,
+          "fp": 542,
+          "fn": 79,
+          "tp": 123
+        },
+        "persistence": {
+          "n": 1210,
+          "events": 202,
+          "eventRate": 0.1669421487603306,
+          "brier": 0.1288964946127391,
+          "rocAuc": 0.7806311881188119,
+          "averagePrecision": 0.4786515015137877,
+          "threshold": 0.11693989071038251,
+          "precision": 0.1669421487603306,
+          "recall": 1.0,
+          "f1": 0.28611898016997167,
+          "tn": 0,
+          "fp": 1008,
+          "fn": 0,
+          "tp": 202
+        }
+      },
+      "skill": 0.2144332891852686
+    },
+    {
+      "city": "Ghent",
+      "selected": "logistic",
+      "trainingCities": [
+        "Benevento",
+        "Coimbra",
+        "Oslo",
+        "Toulouse"
+      ],
+      "trainRows": 12996,
+      "validationRows": 6534,
+      "test": {
+        "logistic": {
+          "n": 726,
+          "events": 32,
+          "eventRate": 0.0440771349862259,
+          "brier": 0.04620896964752366,
+          "rocAuc": 0.6375180115273775,
+          "averagePrecision": 0.07738914836714678,
+          "threshold": 0.17347850981740054,
+          "precision": 0.11627906976744186,
+          "recall": 0.3125,
+          "f1": 0.16949152542372883,
+          "tn": 618,
+          "fp": 76,
+          "fn": 22,
+          "tp": 10
+        },
+        "boosted": {
+          "n": 726,
+          "events": 32,
+          "eventRate": 0.0440771349862259,
+          "brier": 0.04793013087240123,
+          "rocAuc": 0.5239103025936599,
+          "averagePrecision": 0.04904158942233008,
+          "threshold": 0.13218448568164823,
+          "precision": 0.031746031746031744,
+          "recall": 0.125,
+          "f1": 0.05063291139240506,
+          "tn": 572,
+          "fp": 122,
+          "fn": 28,
+          "tp": 4
+        },
+        "seasonal": {
+          "n": 726,
+          "events": 32,
+          "eventRate": 0.0440771349862259,
+          "brier": 0.0494678021901566,
+          "rocAuc": 0.5507249639769451,
+          "averagePrecision": 0.08733307152198391,
+          "threshold": 0.08471275559883155,
+          "precision": 0.0440771349862259,
+          "recall": 1.0,
+          "f1": 0.08443271767810026,
+          "tn": 0,
+          "fp": 694,
+          "fn": 0,
+          "tp": 32
+        },
+        "persistence": {
+          "n": 726,
+          "events": 32,
+          "eventRate": 0.0440771349862259,
+          "brier": 0.049670655401655536,
+          "rocAuc": 0.4769452449567723,
+          "averagePrecision": 0.0440771349862259,
+          "threshold": 0.25527192008879024,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "tn": 662,
+          "fp": 32,
+          "fn": 32,
+          "tp": 0
+        }
+      },
+      "skill": 0.06587785182179362
+    },
+    {
+      "city": "Oslo",
+      "selected": "logistic",
+      "trainingCities": [
+        "Benevento",
+        "Coimbra",
+        "Ghent",
+        "Toulouse"
+      ],
+      "trainRows": 10830,
+      "validationRows": 5445,
+      "test": {
+        "logistic": {
+          "n": 1452,
+          "events": 142,
+          "eventRate": 0.09779614325068871,
+          "brier": 0.08768198865186705,
+          "rocAuc": 0.6860122567465864,
+          "averagePrecision": 0.173589860162346,
+          "threshold": 0.14941806959958814,
+          "precision": 0.1610738255033557,
+          "recall": 0.16901408450704225,
+          "f1": 0.16494845360824742,
+          "tn": 1185,
+          "fp": 125,
+          "fn": 118,
+          "tp": 24
+        },
+        "boosted": {
+          "n": 1452,
+          "events": 142,
+          "eventRate": 0.09779614325068871,
+          "brier": 0.08495728772308886,
+          "rocAuc": 0.6840957961509515,
+          "averagePrecision": 0.244929233639594,
+          "threshold": 0.1448318563625191,
+          "precision": 0.20707070707070707,
+          "recall": 0.2887323943661972,
+          "f1": 0.2411764705882353,
+          "tn": 1153,
+          "fp": 157,
+          "fn": 101,
+          "tp": 41
+        },
+        "seasonal": {
+          "n": 1452,
+          "events": 142,
+          "eventRate": 0.09779614325068871,
+          "brier": 0.08917848415890325,
+          "rocAuc": 0.5153693151274057,
+          "averagePrecision": 0.09940995196386707,
+          "threshold": 0.09170305676855896,
+          "precision": 0.10202020202020202,
+          "recall": 0.7112676056338029,
+          "f1": 0.17844522968197882,
+          "tn": 421,
+          "fp": 889,
+          "fn": 41,
+          "tp": 101
+        },
+        "persistence": {
+          "n": 1452,
+          "events": 142,
+          "eventRate": 0.09779614325068871,
+          "brier": 0.08723497256428522,
+          "rocAuc": 0.562885711213848,
+          "averagePrecision": 0.12176898741613534,
+          "threshold": 0.22984174830444612,
+          "precision": 0.2112676056338028,
+          "recall": 0.2112676056338028,
+          "f1": 0.2112676056338028,
+          "tn": 1198,
+          "fp": 112,
+          "fn": 112,
+          "tp": 30
+        }
+      },
+      "skill": 0.016780903164598127
+    },
+    {
+      "city": "Toulouse",
+      "selected": "logistic",
+      "trainingCities": [
+        "Benevento",
+        "Coimbra",
+        "Ghent",
+        "Oslo"
+      ],
+      "trainRows": 12274,
+      "validationRows": 6171,
+      "test": {
+        "logistic": {
+          "n": 968,
+          "events": 91,
+          "eventRate": 0.09400826446280992,
+          "brier": 0.0822128678228099,
+          "rocAuc": 0.6786998634205019,
+          "averagePrecision": 0.2088639066471526,
+          "threshold": 0.21070581362100005,
+          "precision": 0.19166666666666668,
+          "recall": 0.25274725274725274,
+          "f1": 0.2180094786729858,
+          "tn": 780,
+          "fp": 97,
+          "fn": 68,
+          "tp": 23
+        },
+        "boosted": {
+          "n": 968,
+          "events": 91,
+          "eventRate": 0.09400826446280992,
+          "brier": 0.08000282859662551,
+          "rocAuc": 0.7495081885047679,
+          "averagePrecision": 0.22935876765388902,
+          "threshold": 0.19069186434463795,
+          "precision": 0.2028985507246377,
+          "recall": 0.3076923076923077,
+          "f1": 0.24454148471615722,
+          "tn": 767,
+          "fp": 110,
+          "fn": 63,
+          "tp": 28
+        },
+        "seasonal": {
+          "n": 968,
+          "events": 91,
+          "eventRate": 0.09400826446280992,
+          "brier": 0.0861225405223565,
+          "rocAuc": 0.6132732717681406,
+          "averagePrecision": 0.32197712268043543,
+          "threshold": 0.08608247422680412,
+          "precision": 0.09400826446280992,
+          "recall": 1.0,
+          "f1": 0.17186024551463644,
+          "tn": 0,
+          "fp": 877,
+          "fn": 0,
+          "tp": 91
+        },
+        "persistence": {
+          "n": 968,
+          "events": 91,
+          "eventRate": 0.09400826446280992,
+          "brier": 0.08387947727027306,
+          "rocAuc": 0.5959502299297054,
+          "averagePrecision": 0.1419697074085789,
+          "threshold": 0.25731981981981983,
+          "precision": 0.27586206896551724,
+          "recall": 0.26373626373626374,
+          "f1": 0.2696629213483146,
+          "tn": 814,
+          "fp": 63,
+          "fn": 67,
+          "tp": 24
+        }
+      },
+      "skill": 0.04539662527177413
+    }
+  ],
+  "predictionColumns": [
+    "group",
+    "issueDate",
+    "targetStart",
+    "targetEnd",
+    "event",
+    "probability",
+    "seasonalProbability",
+    "persistenceProbability",
+    "rainMm",
+    "maxAirTemperatureC"
+  ]
+}

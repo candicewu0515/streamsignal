@@ -1,0 +1,70 @@
+{
+  "release": "v7 eight calibrated tasks",
+  "javascriptTestsPassed": 82,
+  "pythonTestsPassed": 22,
+  "deploymentProfilesRefitted": 40,
+  "independentProbabilityFixtures": 1092,
+  "chrome": {
+    "allGroupsRefreshed": 21,
+    "failedGroups": 0,
+    "cachedFieldResources": 16,
+    "serviceWorkerController": "active",
+    "C2": {
+      "retrievedAt": "2026-09-29T17:56:27.809Z",
+      "rain3Probability": 0.017,
+      "rain7Probability": 0.569,
+      "rain7TotalMm": 34.1,
+      "rain7Level": "red"
+    },
+    "lowRainfallCityFilter": "Benevento: 3 distinct-group suggestions",
+    "networkPlan": "5 distinct groups, includes rain and low rainfall",
+    "briefPreviewRows": 5,
+    "calendarPreview": "tentative, exclusive end dates, uncertainty retained"
+  },
+  "prospectiveScientificValidation": false,
+  "fieldRecordsCreated": 0,
+  "calendarWrites": 0,
+  "messagesSent": 0,
+  "cleanup": "Removed two obsolete-only v6 checks; retained all current eight-task and operations checks.",
+  "dashboardPresentation": {
+    "modelChanges": false,
+    "realFirstVisitAutoRefresh": {
+      "groups": 21,
+      "failures": 0
+    },
+    "cachedReentry": "21 saved forecasts reused without a new batch",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mapDots": 21,
+      "minimumDotDiameterPx": 27.8
+    },
+    "keyboardInspect": "Coimbra group 3 opened correct live forecast",
+    "horizonFilter": "3-day and 7-day map/card states verified",
+    "browser": "in-app browser, uncached localhost origin",
+    "staticCacheManifestFiles": 18,
+    "newChromeOfflineInstallTest": false
+  },
+  "bulletinPresentation": {
+    "modelChanges": false,
+    "dataChanges": false,
+    "javascriptTestsPassed": 82,
+    "pythonTestsPassed": 22,
+    "unchangedDataFiles": 10,
+    "textContrastMinimum": 4.5,
+    "viewportsChecked": [
+      1280,
+      390
+    ],
+    "mobileDocumentWidth": 390,
+    "liveProbabilityBars": 8,
+    "liveThresholdTicks": 10,
+    "cachedFieldResources": 24,
+    "serviceWorkerController": "active",
+    "browser": "Codex in-app browser on fresh localhost origin",
+    "newChromeDisconnectedTest": false,
+    "screenshots": "docs/screenshots/",
+    "fontLicense": "SIL OFL 1.1"
+  }
+}

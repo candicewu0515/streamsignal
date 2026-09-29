@@ -1,0 +1,54 @@
+{
+  "profilesRefitted": 40,
+  "fixtures": 1092,
+  "tasks": [
+    {
+      "task": "rain_3",
+      "fitRows": 14814,
+      "testRows": 5082,
+      "calendarGapWindows": 0
+    },
+    {
+      "task": "heat_3",
+      "fitRows": 14814,
+      "testRows": 5082,
+      "calendarGapWindows": 0
+    },
+    {
+      "task": "dry_3",
+      "fitRows": 14814,
+      "testRows": 5082,
+      "calendarGapWindows": 0
+    },
+    {
+      "task": "compound_3",
+      "fitRows": 14814,
+      "testRows": 5082,
+      "calendarGapWindows": 0
+    },
+    {
+      "task": "rain_7",
+      "fitRows": 14682,
+      "testRows": 4830,
+      "calendarGapWindows": 0
+    },
+    {
+      "task": "heat_7",
+      "fitRows": 14682,
+      "testRows": 4830,
+      "calendarGapWindows": 0
+    },
+    {
+      "task": "dry_7",
+      "fitRows": 14682,
+      "testRows": 4830,
+      "calendarGapWindows": 0
+    },
+    {
+      "task": "compound_7",
+      "fitRows": 14682,
+      "testRows": 4830,
+      "calendarGapWindows": 0
+    }
+  ]
+}
