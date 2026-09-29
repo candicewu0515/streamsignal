@@ -1,8 +1,10 @@
 {
   ".gitignore": "235672c74d7c3703abf241a54168ba878a53d6accb8f7a4a416182dbdf7c0322",
   ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "README.md": "ebf1a82f6d58ad0dd5364a2f40a456bbd1d42bffd8b7a0e0f62b0237bf1f0d2f",
-  "THIRD_PARTY_NOTICES.md": "d2e1ba52361d267d2a2bbfb4e64a46ea48fe0f307c16af914639ac548c7b3eac",
+  "LICENSE": "f003cc8d512b41b280ca8140bc425e21d6ee545b182c178a37e69795f98d32f7",
+  "LICENSE_SCOPE.md": "7ca259f55b41fd68357f17dad6ea14c0addc767caaafbacb0fac11a8421e3a05",
+  "README.md": "8a9ff4b45bb337f69f0036531b69545da3de8fa6600a2da99c8cdcc68f9a1eef",
+  "THIRD_PARTY_NOTICES.md": "7e7e80ea81575b43389fe7ecec9dce3eb293d523b9debfdbc237c6af445e58b2",
   "assets/analytics.js": "a6011bfa6b1628753652fd5e221a2372fc52f94e3244f38464f6862a97cbb69a",
   "assets/app.js": "5cb037888b9a4802359fcd2d420d841513f4247fe68b1f38a4f2f5ef473b9a1f",
   "assets/bulletin.css": "19954bfbce3f4fd4287ab5e5502301112a53acd9190fc9b4122ea79bcf1388ed",

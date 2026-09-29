@@ -21,7 +21,7 @@ Natural Earth describes its map data as public domain. The app retains geometry 
 
 ## Application implementation
 
-The original application code uses browser APIs and browser/Node standard APIs, with no bundled third-party JavaScript frameworks. The icon is an original SVG. No model API, authentication token, password or private key is present in the app. A code licence should be chosen by the participant before repository publication; this file does not assign rights in source data.
+The original application code uses browser APIs and browser/Node standard APIs, with no bundled third-party JavaScript frameworks. The icon is an original SVG. No model API, authentication token, password or private key is present in the app. Original StreamSignal code is licensed under the root MIT LICENSE. This does not grant rights in source data or relicense third-party assets; see LICENSE_SCOPE.md.
 
 ## Optional model reproduction
 
@@ -32,3 +32,7 @@ The offline interface has no external JavaScript dependencies. The separate Pyth
 IBM Plex Sans Regular and Medium, IBM Plex Sans Condensed Medium, and IBM Plex Mono Regular are bundled as complete WOFF2 fonts from [IBM’s official Plex repository](https://github.com/IBM/plex), downloaded 29 September 2026. Source paths: `packages/plex-sans/fonts/complete/woff2/`, `packages/plex-sans-condensed/fonts/complete/woff2/`, and `packages/plex-mono/fonts/complete/woff2/`.
 
 Copyright IBM Corp. Licensed under the SIL Open Font License 1.1. The unmodified licence is bundled at `assets/fonts/OFL.txt`; font binaries are covered by `SHA256.json`. The fonts are self-hosted and require no external font service.
+
+## Open-Meteo weather data
+
+Weather data by [Open-Meteo](https://open-meteo.com/) are provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), as described in [the provider’s licence](https://open-meteo.com/en/licence). StreamSignal aggregates daily forecasts and fits calibration models; its derived probabilities are not the provider’s unmodified output. The project’s MIT code licence does not replace the data licence.

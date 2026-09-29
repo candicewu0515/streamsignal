@@ -45,3 +45,7 @@ Dashboard labels are Red / Yellow / Alert / Clear; Clear means below weather tri
 The interface uses petrol navigation, stone surfaces, explicit Red / Yellow / Alert / Clear labels and task-threshold probability bars. Headings and status lines replace promotional hero cards. IBM Plex fonts are self-hosted under the OFL and included in the offline cache. Models, source data and decision policies are unchanged. See [style verification and before/after screenshots](docs/BULLETIN_STYLE.md).
 
 Version 8 fixes prose punctuation, derives the headline from fresh alerts, fits all four hazards in the group board, uses 1-based display group numbers and computes Mission control suggestions on opening. The underlying recommendation rules are unchanged and suggestions still require acceptance. See [v8 verification](docs/V8_REVIEW.md).
+
+## License
+
+Original StreamSignal code is licensed under the [MIT License](LICENSE). **Third-party data and assets are excluded from this grant**, including OneAquaHealth datasets, Open-Meteo weather, derived research data and embedded parameter blocks. Their original terms and attribution requirements remain applicable. See [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
