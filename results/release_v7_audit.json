@@ -62,7 +62,7 @@
     "liveThresholdTicks": 10,
     "cachedFieldResources": 24,
     "serviceWorkerController": "active",
-    "browser": "Codex in-app browser on fresh localhost origin",
+    "browser": "In-app browser on fresh localhost origin",
     "newChromeDisconnectedTest": false,
     "screenshots": "docs/screenshots/",
     "fontLicense": "SIL OFL 1.1"
